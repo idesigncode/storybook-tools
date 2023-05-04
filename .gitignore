@@ -19,6 +19,7 @@ __snapshots__/failed/
 
 # Build files
 storybook-static/
+/DefaultValue.mjs
 /DocsContainer.mjs
 /PropsTable.mjs
 /Source.mjs

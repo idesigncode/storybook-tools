@@ -40,6 +40,7 @@
     "test:storybook:update": "npm run test:storybook -- --updateSnapshot"
   },
   "files": [
+    "DefaultValue.mjs",
     "DocsContainer.mjs",
     "PropsTable.mjs",
     "Source.mjs",
@@ -49,6 +50,7 @@
     "styles.css"
   ],
   "exports": {
+    "./DefaultValue.mjs": "./DefaultValue.mjs",
     "./DocsContainer.mjs": "./DocsContainer.mjs",
     "./PropsTable.mjs": "./PropsTable.mjs",
     "./Source.mjs": "./Source.mjs",
