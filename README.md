@@ -1,6 +1,6 @@
-# template-esm-react
+# @idesigncode/storybook-tools
 
-Quickly setup ESM React repositories with preconfigured functionality.
+A collection of tools & React components for use with Storybook.
 
 ## Installation
 
