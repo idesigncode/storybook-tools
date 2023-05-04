@@ -1,0 +1,103 @@
+{
+  "name": "template-esm-react",
+  "version": "2.0.1",
+  "description": "Quickly setup ESM React repositories with preconfigured functionality.",
+  "keywords": [
+    "react",
+    "babel",
+    "postcss",
+    "eslint",
+    "coverage-report",
+    "snapshot-testing",
+    "scss",
+    "prettier",
+    "storybook",
+    "cleanup",
+    "esm",
+    "husky",
+    "browserslist",
+    "lint-staged",
+    "npmrc",
+    "mjs",
+    "nvmrc",
+    "npm-init",
+    "interaction-testing",
+    "postprepare"
+  ],
+  "license": "MIT",
+  "author": "Matthew Nuthall",
+  "repository": "github:idesigncode/template-esm-react",
+  "bugs": "https://github.com/idesigncode/template-esm-react/issues",
+  "homepage": "https://github.com/idesigncode/template-esm-react#readme",
+  "engines": {
+    "node": ">= 18.0.0",
+    "npm": ">= 9.0.0"
+  },
+  "browserslist": [
+    "> 0.2%",
+    "last 2 versions"
+  ],
+  "scripts": {
+    "eslint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
+    "postprepare": "node .npm-postprepare.cjs",
+    "prepare": "npm run prepare:clean && npm run prepare:css && npm run prepare:js && husky install",
+    "prepare:clean": "node .npm-prepare-clean.cjs",
+    "prepare:css": "sass --no-source-map src:. && postcss *.css -d .",
+    "prepare:js": "babel src --out-dir . --ignore **/*.test.mjs,**/*.stories.mjs --keep-file-extension",
+    "prepublishOnly": "npm run test",
+    "prettier": "prettier --write . --ignore-path .gitignore",
+    "storybook": "storybook dev --ci -p 6006",
+    "storybook:build": "storybook build --quiet --docs",
+    "test": "npm run test:prettier && npm run test:eslint",
+    "test:eslint": "eslint . --ext .js,.cjs,.mjs --ignore-path .gitignore",
+    "test:prettier": "prettier --check . --ignore-path .gitignore",
+    "test:storybook": "test-storybook --stories-json --coverage",
+    "test:storybook:update": "npm run test:storybook -- --updateSnapshot"
+  },
+  "files": [
+    "ExampleComponent.mjs",
+    "exampleFunction.mjs",
+    "exampleStyles.css"
+  ],
+  "exports": {
+    "./ExampleComponent.mjs": "./ExampleComponent.mjs",
+    "./exampleFunction.mjs": "./exampleFunction.mjs",
+    "./exampleStyles.css": "./exampleStyles.css",
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "prop-types": "^15.8.1",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.5",
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-react": "^7.18.6",
+    "@storybook/addon-coverage": "^0.0.8",
+    "@storybook/addon-docs": "^7.0.8",
+    "@storybook/addon-interactions": "^7.0.8",
+    "@storybook/addons": "^7.0.8",
+    "@storybook/jest": "^0.1.0",
+    "@storybook/react": "^7.0.8",
+    "@storybook/react-webpack5": "^7.0.8",
+    "@storybook/test-runner": "^0.10.0",
+    "@storybook/testing-library": "^0.1.0",
+    "autoprefixer": "^10.4.14",
+    "babel-plugin-inline-react-svg": "^2.0.2",
+    "cssnano": "^6.0.1",
+    "eslint": "^8.39.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "jest-image-snapshot": "^6.1.0",
+    "lint-staged": "^13.2.2",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.8",
+    "sass": "^1.62.1",
+    "storybook": "^7.0.8",
+    "storybook-dark-mode": "^3.0.0"
+  }
+}

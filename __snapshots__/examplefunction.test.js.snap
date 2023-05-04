@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`exampleFunction Example test 1`] = `"This is the argument given to exampleFunction"`;

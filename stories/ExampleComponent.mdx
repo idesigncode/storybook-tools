@@ -1,0 +1,17 @@
+import { Meta, Source, Story } from '@storybook/addon-docs';
+import * as ExampleComponentStories from './ExampleComponent.stories.mjs';
+import ExampleComponentWithPropsRaw from './ExampleComponentWithProps.mjs?raw';
+
+<Meta of={ExampleComponentStories} />
+
+# ExampleComponent
+
+Description of the example component.
+
+### Example:
+
+<Story of={ExampleComponentStories.Example} />
+
+### Implementation:
+
+<Source code={ExampleComponentWithPropsRaw} />

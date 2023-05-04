@@ -1,0 +1,18 @@
+import { Meta, Source, Story } from '@storybook/addon-docs';
+import * as exampleFunctionStories from './exampleFunction.stories.mjs';
+
+<Meta of={exampleFunctionStories} />
+
+# exampleFunction
+
+Description of the example function.
+
+### Example:
+
+<Story of={exampleFunctionStories.Example} />
+
+### Implementation:
+
+<Source
+  code={`exampleFunction('${exampleFunctionStories.Example.args.arg}')`}
+/>
