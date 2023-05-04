@@ -18,7 +18,9 @@ npm i @idesigncode/storybook-components --save
 - 📑 [PropsTable](https://idesigncode-storybook-components.netlify.app/?path=/docs/components-propstable--docs): automatically document static & "live-updating" props details.
 - 🖥️ [Source](https://idesigncode-storybook-components.netlify.app/?path=/docs/components-source--docs) & [Raw Imports](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-raw-imports--docs): output production-ready source code.
 - 🌙 [DocsContainer](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-docscontainer--docs): dark mode support for Storybook Docs with [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode).
+- 📸 Image snapshot testing compatible.
 - 🎉 Compatible with `MDX` and `CSF` stories.
+- 🧪 Tested with [Storybook Test Runner](https://storybook.js.org/docs/react/writing-tests/test-runner) to run [User Interaction](https://storybook.js.org/docs/react/writing-tests/interaction-testing), [DOM](https://jestjs.io/docs/snapshot-testing) & [Image](https://github.com/americanexpress/jest-image-snapshot) Snapshot tests.
 
 ## Requirements
 

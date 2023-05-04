@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Configuration/CSS Combined Stylesheet test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // .storybook/preview.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-components/styles.css'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
