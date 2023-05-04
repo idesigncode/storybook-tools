@@ -27,7 +27,7 @@
     "postprepare": "node .npm-postprepare.cjs",
     "prepare": "npm run prepare:clean && npm run prepare:css && npm run prepare:js && husky install",
     "prepare:clean": "node .npm-prepare-clean.cjs",
-    "prepare:css": "sass --no-source-map src:. && postcss *.css -d .",
+    "prepare:css": "sass --no-source-map src/styles.scss:./styles.css && postcss *.css -d .",
     "prepare:js": "babel src --out-dir . --ignore **/*.test.mjs,**/*.stories.mjs --keep-file-extension",
     "prepublishOnly": "npm run test",
     "prettier": "prettier --write . --ignore-path .gitignore",
@@ -39,9 +39,12 @@
     "test:storybook": "test-storybook --stories-json --coverage",
     "test:storybook:update": "npm run test:storybook -- --updateSnapshot"
   },
-  "files": [],
+  "files": [
+    "styles.css"
+  ],
   "exports": {
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./styles.css": "./styles.css"
   },
   "dependencies": {
     "prop-types": "^15.8.1"

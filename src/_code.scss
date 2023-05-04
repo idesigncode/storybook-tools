@@ -1,0 +1,54 @@
+code {
+  &:not(.Source code) {
+    padding: 0.3rem 0.5rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1.3rem;
+    color: inherit;
+    border: 1px solid var(--code_border-color);
+    background-color: var(--code_background-color);
+  }
+
+  /* Code highlighting */
+  color: var(--code-highlight_color);
+
+  .string {
+    color: var(--code-highlight-string_color);
+  }
+
+  .tag,
+  .parameter {
+    color: var(--code-highlight-tag-parameter_color);
+  }
+
+  .function,
+  .attr-name,
+  .property {
+    color: var(--code-highlight-tag-function-attr-name-property_color);
+  }
+
+  .boolean,
+  .number {
+    color: var(--code-highlight-tag-boolean-number_color);
+  }
+
+  .keyword,
+  .attr-value {
+    color: var(--code-highlight-tag-keyword-attr-value_color);
+  }
+
+  .punctuation,
+  .operator {
+    color: var(--code-highlight-tag-punctuation_color);
+  }
+
+  .class-name,
+  .maybe-class-name {
+    color: var(--code-highlight-tag-class-name-maybe-class-name_color);
+  }
+
+  .comment {
+    color: var(--code-highlight-comment_color);
+    font-style: italic;
+  }
+}

@@ -1,6 +1,6 @@
-# @idesigncode/storybook-components
+# @idesigncode/storybook-tools
 
-A collection of React components for use with Storybook.
+A collection of tools & React components for use with Storybook.
 
 ## Documentation [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://idesigncode-storybook-components.netlify.app)
 
@@ -19,3 +19,5 @@ node ^18.0.0
 react ^18.0.0
 storybook ^7.0.0
 ```
+
+- A small amount of [configuration](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-css--docs) for default styles.
