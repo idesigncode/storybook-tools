@@ -2,11 +2,33 @@ import React from 'react';
 import { expect, jest } from '@storybook/jest';
 import { userEvent, within } from '@storybook/testing-library';
 import { useDarkMode } from 'storybook-dark-mode';
+import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
 
 export default {
   title: 'Components/Source',
   component: Source,
+};
+
+export const Props = {
+  args: {
+    children: <Source code="<Component />" removePropsTable={true} />,
+    props: {
+      dark: {
+        type: 'boolean',
+        value: 'useDarkMode()',
+      },
+      code: {
+        type: 'string',
+      },
+      importPathReplacer: {
+        type: 'string || boolean',
+        value: 'process.env.PACKAGE_NAME',
+      },
+    },
+    hideChildren: true,
+  },
+  render: (args) => <PropsTable {...args} />,
 };
 
 export const Code = {

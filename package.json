@@ -41,20 +41,30 @@
   },
   "files": [
     "DocsContainer.mjs",
+    "PropsTable.mjs",
     "Source.mjs",
+    "formatNodeToJsxString.mjs",
+    "formatValueToString.mjs",
+    "getValueType.mjs",
     "styles.css"
   ],
   "exports": {
     "./DocsContainer.mjs": "./DocsContainer.mjs",
+    "./PropsTable.mjs": "./PropsTable.mjs",
     "./Source.mjs": "./Source.mjs",
+    "./formatNodeToJsxString.mjs": "./formatNodeToJsxString.mjs",
+    "./formatValueToString.mjs": "./formatValueToString.mjs",
+    "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
     "./styles.css": "./styles.css"
   },
   "dependencies": {
     "@storybook/addon-docs": "^7.0.8",
     "@storybook/theming": "^7.0.8",
+    "babel-plugin-react-docgen": "^4.2.1",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
+    "react-element-to-jsx-string": "^15.0.0",
     "react-syntax-highlighter": "^15.5.0",
     "storybook-dark-mode": "^3.0.0"
   },

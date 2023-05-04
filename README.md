@@ -14,6 +14,8 @@ npm i @idesigncode/storybook-components --save
 
 ## Features
 
+- ✏️ Write functional "example components" for actual use cases of a component.
+- 📑 [PropsTable](https://idesigncode-storybook-components.netlify.app/?path=/docs/components-propstable--docs): automatically document static & "live-updating" props details.
 - 🖥️ [Source](https://idesigncode-storybook-components.netlify.app/?path=/docs/components-source--docs) & [Raw Imports](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-raw-imports--docs): output production-ready source code.
 - 🌙 [DocsContainer](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-docscontainer--docs): dark mode support for Storybook Docs with [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode).
 - 🎉 Compatible with `MDX` and `CSF` stories.
