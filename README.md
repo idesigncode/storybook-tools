@@ -1,6 +1,6 @@
-# @idesigncode/storybook-tools
+# @idesigncode/storybook-components
 
-A collection of tools & React components for use with Storybook.
+A collection of React components for use with Storybook.
 
 ## Documentation [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://idesigncode-storybook-components.netlify.app)
 
@@ -24,4 +24,5 @@ react ^18.0.0
 storybook ^7.0.0
 ```
 
+- The [Raw Imports](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-raw-imports--docs) feature requires the default [Webpack builder](https://storybook.js.org/docs/react/builders/webpack) for Storybook.
 - A small amount of [configuration](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-css--docs) for default styles.
