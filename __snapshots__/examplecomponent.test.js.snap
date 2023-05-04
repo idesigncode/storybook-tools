@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`ExampleComponent Example test 1`] = `
-<input class="ExampleComponentWithProps"
-       data-testid="ExampleComponent"
->
-`;

@@ -1,0 +1,485 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/DefaultValue Automatic Type Source test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Stories of Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DefaultValue
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        DefaultValue
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        value
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        value
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/DefaultValue Automatic Type test 1`] = `
+<div class="defaultValue sb-anchor">
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Default value:
+        </th>
+        <td>
+          <code>
+            string
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token string">
+                  "value"
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Stories of Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DefaultValue
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        DefaultValue
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        link
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        url
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        type
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        object
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        value
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        value
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/DefaultValue Manual Type With Link test 1`] = `
+<div class="defaultValue sb-anchor">
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Default value:
+        </th>
+        <td>
+          <code>
+            object
+          </code>
+        </td>
+        <td>
+          <a href="url"
+             target="_blank"
+             rel="noreferrer"
+          >
+            { value }
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Components/DefaultValue Props test 1`] = `
+<div class="propsTable sb-anchor">
+  <table aria-hidden="false">
+    <thead>
+      <tr>
+        <th>
+          Prop
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          link
+        </td>
+        <td>
+          <code>
+            string
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token string">
+                  "url"
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          type
+        </td>
+        <td>
+          <code>
+            string
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token string">
+                  "string"
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          value
+          <span class="requiredProp">
+            *
+          </span>
+        </td>
+        <td>
+          <code>
+            any
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class>
+                  any
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
+exports[`Components/DefaultValue Ref Type Source test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Stories of Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DefaultValue
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        DefaultValue
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        type
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        ref object
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        value
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript literal-property property">
+        current
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        "[Circular]"
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/DefaultValue Ref Type test 1`] = `
+<div class="defaultValue sb-anchor">
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Default value:
+        </th>
+        <td>
+          <code>
+            ref object
+          </code>
+        </td>
+        <td>
+          <a href="https://react.dev/learn/referencing-values-with-refs"
+             target="_blank"
+             rel="noreferrer"
+          >
+            See React docs
+          </a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

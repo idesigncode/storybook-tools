@@ -1,0 +1,18 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as RawImportsStories from './RawImports.stories.mjs';
+
+<Meta of={RawImportsStories} />
+
+# Raw Imports
+
+To document the source code of any file you can use the `?raw` import suffix (a.k.a. "webpack resource query"):
+
+<Story of={RawImportsStories.Example} />
+
+To use the `?raw` import suffix, the following configuration must be added to `./storybook/main.mjs`:
+
+<Story of={RawImportsStories.WebpackFinalRulesConfig} />
+
+> #### See also:
+>
+> - [Source](/docs/components-source--docs) - a component to display a block of source code.

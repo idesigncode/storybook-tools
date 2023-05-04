@@ -1,0 +1,52 @@
+table {
+  font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
+    'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+  line-height: 24px;
+  border-collapse: collapse;
+
+  tr {
+    margin: 0;
+    padding: 0;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    margin: 0;
+  }
+
+  th {
+    background-color: var(--table-th_background-color);
+    font-weight: bold;
+  }
+
+  td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--table-th_border-color);
+    background-color: var(--table-td_background-color);
+  }
+
+  .Source {
+    display: inline-block;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+
+    pre {
+      padding: 0;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}

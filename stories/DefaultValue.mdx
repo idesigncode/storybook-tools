@@ -1,0 +1,30 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as DefaultValueStories from './DefaultValue.stories.mjs';
+
+<Meta of={DefaultValueStories} />
+
+# DefaultValue
+
+Adds a table with details of a single prop's default value.
+
+<Story of={DefaultValueStories.Props} />
+
+### Implementation:
+
+The `type` is automatically detected from the required `value`:
+
+<Story of={DefaultValueStories.AutomaticTypeSource} />
+
+<Story of={DefaultValueStories.AutomaticType} />
+
+For further control, you can optionally override `type` or add a `link` as needed:
+
+<Story of={DefaultValueStories.ManualTypeWithLinkSource} />
+
+<Story of={DefaultValueStories.ManualTypeWithLink} />
+
+Specifying a `ref object` either by `type` or `value` will automatically generate text and a link to the React Docs:
+
+<Story of={DefaultValueStories.RefTypeSource} />
+
+<Story of={DefaultValueStories.RefType} />

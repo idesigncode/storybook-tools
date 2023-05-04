@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Configuration/DocsContainer Docs Container Config test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // .storybook/preview.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        DocsContainer
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-tools/DocsContainer.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        export
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+        parameters
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token literal-property property">
+        docs
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token literal-property property">
+        container
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+        DocsContainer
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...parameters.docs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // ...parameters
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token punctuation">
+        }
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;

@@ -1,0 +1,517 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components/Source Code test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        Source
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        code
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        &lt;Component /&gt;
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Component Raw Displayed Source test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Source code displayed by &lt;Source code={ComponentRaw} /&gt;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        Replace
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '@idesigncode/storybook-tools/Replace.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        Preserve
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './../Preserve.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+        notAnImport
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './../Replace.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Component Raw test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Stories of Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        ComponentRaw
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './Component.mjs?raw'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        Source
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        code
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+        ComponentRaw
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Component test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        Replace
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './../Replace.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        Preserve
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './../Preserve.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // preserve-path
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        const
+      </span>
+      <span class>
+        notAnImport
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './../Replace.mjs'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Dark test 1`] = `
+<div class="Source sb-unstyled dark">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token tag punctuation">
+        &lt;
+      </span>
+      <span class="token tag class-name">
+        Source
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        code
+      </span>
+      <span class="token tag attr-value punctuation attr-equals">
+        =
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag attr-value">
+        &lt;Component /&gt;
+      </span>
+      <span class="token tag attr-value punctuation">
+        "
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        dark
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript boolean">
+        true
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag punctuation">
+        /&gt;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Env test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // .env
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token constant">
+        PACKAGE_NAME
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+        $npm_package_name
+      </span>
+      <span class="token comment">
+        // Uses 'name' from package.json
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Components/Source Props test 1`] = `
+<div class="propsTable sb-anchor">
+  <table aria-hidden="false">
+    <thead>
+      <tr>
+        <th>
+          Prop
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          code
+          <span class="requiredProp">
+            *
+          </span>
+        </td>
+        <td>
+          <code>
+            string
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token string">
+                  "&lt;Component /&gt;"
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          dark
+        </td>
+        <td>
+          <code>
+            boolean
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token function">
+                  useDarkMode
+                </span>
+                <span class="token punctuation">
+                  (
+                </span>
+                <span class="token punctuation">
+                  )
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          importPathReplacer
+        </td>
+        <td>
+          <code>
+            string || boolean
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class>
+                  process
+                </span>
+                <span class="token punctuation">
+                  .
+                </span>
+                <span class>
+                  env
+                </span>
+                <span class="token punctuation">
+                  .
+                </span>
+                <span class="token constant">
+                  PACKAGE_NAME
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          removePropsTable
+        </td>
+        <td>
+          <code>
+            boolean
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token boolean">
+                  true
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

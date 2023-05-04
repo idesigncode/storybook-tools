@@ -1,0 +1,59 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as PropsTableStories from './PropsTable.stories.mjs';
+
+<Meta of={PropsTableStories} />
+
+# PropsTable
+
+Adds a table of props details automatically generated from the props given to a single child component.
+
+<Story of={PropsTableStories.Props} />
+
+> #### Note:
+>
+> - The `Component.propTypes` are used to indicate if each prop is `required`.
+> - A prop's default value will be used if the prop on the child component has no value.
+
+### Implementation:
+
+To document actual use cases of a component with props, simply wrap the component with `PropsTable` in the functional "example component":
+
+<Story of={PropsTableStories.AutomaticPropsSource} />
+
+This will output the "example component" and the `PropsTable` below it.
+
+The prop `values` displayed in the `PropsTable` will update if the child component's props are updated:
+
+<Story of={PropsTableStories.AutomaticProps} />
+
+> #### Note:
+>
+> - The [Source](/docs/components-source--docs) component automatically removes the use of `PropsTable` from the displayed source code:
+>
+> <Story of={PropsTableStories.RawImport} />
+>
+> <Story of={PropsTableStories.RawImportDisplayedSource} />
+>
+> #### See also:
+>
+> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.
+
+Use the boolean `hideChildren` to only show the `PropsTable` and disable rendering of the "example component".
+
+For further control, you can also use `props` to override each `required`, `type` or `value` of a prop as needed:
+
+<Story of={PropsTableStories.ManualTypeWithRequiredSource} />
+
+<Story of={PropsTableStories.ManualTypeWithRequired} />
+
+<details>
+  <summary>
+    <p>
+      <strong>Examples of all prop types</strong>
+    </p>
+  </summary>
+
+Below is a complete list of example props showing how the `PropsTable` will display them:
+
+  <Story of={PropsTableStories.AllPropTypes} />
+</details>

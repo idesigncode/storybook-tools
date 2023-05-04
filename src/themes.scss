@@ -1,0 +1,68 @@
+/* Light/dark mode themes */
+@mixin dark {
+  color-scheme: dark;
+  --sb_background-color: #1b1c1d;
+  --blockquote_background-color: #1c3146;
+  --blockquote_border-left-color: #294c6c;
+  --code_background-color: #2e3438;
+  --code_border-color: #7b8286;
+  --table-th_border-color: rgba(255, 255, 255, 0.1);
+  --table-th_background-color: #292c2e;
+  --table-td_background-color: #1e2121;
+}
+
+@mixin light {
+  color-scheme: light;
+  --sb_background-color: #ffffff;
+  --blockquote_background-color: #eff7ff;
+  --blockquote_border-left-color: #b9deff;
+  --code_background-color: #f7fafc;
+  --code_border-color: #d9e0e5;
+  --table-th_border-color: hsla(203, 50%, 30%, 0.15);
+  --table-th_background-color: #f8f8f8;
+  --table-td_background-color: #ffffff;
+}
+
+:root {
+  &:not(.dark):not(.light) {
+    @media (prefers-color-scheme: dark) {
+      @include dark;
+    }
+    @media (prefers-color-scheme: light) {
+      @include light;
+    }
+  }
+
+  &.dark {
+    @include dark;
+  }
+
+  &.light {
+    @include light;
+  }
+}
+
+/* Code highlight themes */
+.Source {
+  --code-highlight_color: #393a34;
+  --code-highlight-comment_color: #c5c5c5;
+  --code-highlight-string_color: #619932;
+  --code-highlight-tag-parameter_color: #006dcc;
+  --code-highlight-tag-function-attr-name-property_color: #b474dd;
+  --code-highlight-tag-boolean-number_color: #dd9074;
+  --code-highlight-tag-keyword-attr-value_color: #0000ff;
+  --code-highlight-tag-punctuation_color: inherit;
+  --code-highlight-tag-class-name-maybe-class-name_color: #36acaa;
+
+  &.dark {
+    --code-highlight_color: #ededed;
+    --code-highlight-comment_color: #7c7c7c;
+    --code-highlight-string_color: #92c379;
+    --code-highlight-tag-parameter_color: #a8ff60;
+    --code-highlight-tag-function-attr-name-property_color: #96cbfe;
+    --code-highlight-tag-boolean-number_color: #f19c7e;
+    --code-highlight-tag-keyword-attr-value_color: #b474dd;
+    --code-highlight-tag-punctuation_color: #ededed;
+    --code-highlight-tag-class-name-maybe-class-name_color: #ffffb6;
+  }
+}

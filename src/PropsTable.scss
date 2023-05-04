@@ -1,0 +1,48 @@
+@use 'root';
+@use 'code';
+@use 'tables';
+
+.propsTable {
+  display: flex;
+  overflow: auto;
+  border-radius: 0.4rem;
+  box-shadow: rgb(0 0 0 / 10%) 0 0.1rem 0.3rem 0.1rem,
+    rgb(0 0 0 / 7%) 0 0 0 0.1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 3rem;
+
+  table {
+    width: 100%;
+    border-radius: 0.4rem;
+    overflow: hidden;
+
+    th,
+    td {
+      padding: 1rem 2rem;
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+    tr {
+      &,
+      th {
+        border-top-width: 0;
+      }
+    }
+
+    tr:last-of-type {
+      &,
+      td {
+        border-bottom-width: 0;
+      }
+    }
+
+    .requiredProp {
+      color: red;
+    }
+  }
+}
+
+.example {
+  margin: 1rem 0 2rem;
+}

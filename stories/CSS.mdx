@@ -1,0 +1,10 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as CSSStories from './CSS.stories.mjs';
+
+<Meta of={CSSStories} />
+
+# CSS
+
+The component styles can be imported into `.storybook/preview.mjs` with a single css file:
+
+<Story of={CSSStories.CombinedStylesheet} />

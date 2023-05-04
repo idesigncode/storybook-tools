@@ -1,0 +1,92 @@
+@use 'root';
+@use 'links';
+@use 'code';
+
+/* Loading screen */
+body,
+.sb-preparing-story,
+.sb-preparing-docs {
+  background-color: var(--sb_background-color);
+}
+
+.sb-preparing-docs {
+  > .sb-previewBlock {
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .sb-previewBlock,
+  .sb-previewBlock_body {
+    height: 100%;
+  }
+
+  .sb-previewBlock_header,
+  .sb-argstableBlock {
+    display: none;
+  }
+}
+
+/* General */
+#storybook-root,
+#storybook-docs {
+  .sbdocs-wrapper {
+    padding: 4rem 3rem;
+  }
+
+  /* Headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
+      'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+      Helvetica, Arial, sans-serif;
+    margin-bottom: 0.5em;
+
+    > a {
+      display: none;
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  h5 {
+    font-size: 1.4rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    background-color: var(--blockquote_background-color);
+    border-left-color: var(--blockquote_border-left-color);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  /* Expandable section */
+  details {
+    summary {
+      margin-bottom: 1em;
+
+      p {
+        display: inline;
+      }
+    }
+  }
+}

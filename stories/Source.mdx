@@ -1,0 +1,55 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as SourceStories from './Source.stories.mjs';
+
+<Meta of={SourceStories} />
+
+# Source
+
+Adds a block of source code with "copy" functionality to the page.
+
+Similar to [Storybook's Source block](https://storybook.js.org/docs/react/api/doc-block-source) but with code replacement functionality for production-ready source code and image snapshot testing compatibility.
+
+<Story of={SourceStories.Props} />
+
+### Implementation:
+
+To render a source code block provide any string as `code`:
+
+<Story of={SourceStories.Code} />
+
+The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode), but this can be overwritten with the boolean `dark`:
+
+<Story of={SourceStories.Dark} />
+
+> #### Note:
+>
+> - As `Source` is designed to show production-ready source code, it will automatically remove any use of [PropsTable](/docs/components-propstable--docs).
+> - This can be disabled by setting `removePropsTable` to `false`.
+
+### Import Path Replacement (optional):
+
+By default, the import path replacement functionality is disabled unless `process.env.PACKAGE_NAME` has a value.
+
+You can set `process.env.PACKAGE_NAME` to automatically show all relative [file import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) paths as they would be used by a consumer of your code:
+
+<Story of={SourceStories.Env} />
+
+You can also disable import path replacements by setting `importPathReplacer` to `false` or an empty string.
+
+Alternatively you can supply your own string for `importPathReplacer` directly on each instance of `Source`.
+
+For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
+
+<Story of={SourceStories.Component} />
+
+<Story of={SourceStories.ComponentRaw} />
+
+<Story of={SourceStories.ComponentRawDisplayedSource} />
+
+> #### Note:
+>
+> - Any use of the `// preserve-path` will be removed from the displayed source code if `importPathReplacer` has a non-empty string value.
+>
+> #### See also:
+>
+> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.
