@@ -1,4 +1,4 @@
-import { Source } from '@storybook/addon-docs';
+import Source from '../src/Source.mjs';
 
 export default {
   title: 'Configuration/CSS',

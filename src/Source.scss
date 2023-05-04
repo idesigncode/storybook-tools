@@ -1,0 +1,71 @@
+@use 'root';
+@use 'code';
+
+.Source {
+  --source_background-color: #ffffff;
+  --source-button_color: inherit;
+  --source-button_background-color: #ffffff;
+  --source-button_border-color: hsla(203, 50%, 30%, 0.15);
+
+  &.dark {
+    --source_background-color: #1b1c1d;
+    --source-button_color: #c9cdcf;
+    --source-button_background-color: #1b1c1d;
+    --source-button_border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  display: block;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  vertical-align: text-bottom;
+  background-color: var(--source_background-color);
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  border-radius: 0.4rem;
+  box-shadow: rgb(0 0 0 / 10%) 0 0.1rem 0.3rem 0.1rem,
+    rgb(0 0 0 / 7%) 0 0 0 0.1rem;
+
+  pre {
+    margin: 0;
+    padding: 2rem 2rem 2.5rem 2rem;
+    overflow: auto;
+
+    code {
+      display: inline-block;
+      padding: 0;
+      border: none;
+      background-color: transparent;
+      font-family: ui-monospace, Menlo, Monaco, 'Roboto Mono', 'Oxygen Mono',
+        'Ubuntu Monospace', 'Source Code Pro', 'Droid Sans Mono', 'Courier New',
+        monospace;
+    }
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    border: 0 none;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
+      'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+      Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border-radius: 0.4rem 0 0 0;
+    border-top: 1px solid var(--source-button_border-color);
+    border-left: 1px solid var(--source-button_border-color);
+    color: var(--source-button_color);
+    background: var(--source-button_background-color);
+
+    &:focus {
+      box-shadow: #029cfd 0 -3px 0 0 inset;
+      outline: 0 none;
+    }
+  }
+}

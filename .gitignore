@@ -20,4 +20,5 @@ __snapshots__/failed/
 # Build files
 storybook-static/
 /DocsContainer.mjs
+/Source.mjs
 /styles.css

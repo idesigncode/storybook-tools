@@ -1,6 +1,6 @@
-# @idesigncode/storybook-components
+# @idesigncode/storybook-tools
 
-A collection of React components for use with Storybook.
+A collection of tools & React components for use with Storybook.
 
 ## Documentation [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://idesigncode-storybook-components.netlify.app)
 
@@ -14,7 +14,9 @@ npm i @idesigncode/storybook-components --save
 
 ## Features
 
+- 🖥️ [Source](https://idesigncode-storybook-components.netlify.app/?path=/docs/components-source--docs) & [Raw Imports](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-raw-imports--docs): output production-ready source code.
 - 🌙 [DocsContainer](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-docscontainer--docs): dark mode support for Storybook Docs with [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode).
+- 🎉 Compatible with `MDX` and `CSF` stories.
 
 ## Requirements
 

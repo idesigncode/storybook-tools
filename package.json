@@ -41,17 +41,21 @@
   },
   "files": [
     "DocsContainer.mjs",
+    "Source.mjs",
     "styles.css"
   ],
   "exports": {
     "./DocsContainer.mjs": "./DocsContainer.mjs",
+    "./Source.mjs": "./Source.mjs",
     "./package.json": "./package.json",
     "./styles.css": "./styles.css"
   },
   "dependencies": {
     "@storybook/addon-docs": "^7.0.8",
     "@storybook/theming": "^7.0.8",
+    "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
+    "react-syntax-highlighter": "^15.5.0",
     "storybook-dark-mode": "^3.0.0"
   },
   "devDependencies": {
@@ -78,7 +82,6 @@
     "lint-staged": "^13.2.2",
     "postcss": "^8.4.23",
     "postcss-cli": "^10.1.0",
-    "prettier": "^2.8.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "sass": "^1.62.1",
