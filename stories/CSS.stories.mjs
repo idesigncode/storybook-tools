@@ -9,7 +9,7 @@ export const CombinedStylesheet = {
   args: {
     code: [
       `// .storybook/preview.mjs`,
-      `import '@idesigncode/storybook-components/styles.css';`,
+      `import '@idesigncode/storybook-tools/styles.css';`,
     ].join('\n'),
   },
 };

@@ -25,7 +25,7 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-components/DefaultValue.mjs'
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -130,7 +130,7 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-components/DefaultValue.mjs'
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -364,7 +364,7 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-components/DefaultValue.mjs'
+        '@idesigncode/storybook-tools/DefaultValue.mjs'
       </span>
       <span class="token punctuation">
         ;

@@ -9,7 +9,7 @@ export const DocsContainerConfig = {
   args: {
     code: [
       `// .storybook/preview.mjs`,
-      `import DocsContainer from '@idesigncode/storybook-components/DocsContainer.mjs';`,
+      `import DocsContainer from '@idesigncode/storybook-tools/DocsContainer.mjs';`,
       ``,
       `export const parameters = {`,
       ` docs: {`,
