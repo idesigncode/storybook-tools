@@ -39,15 +39,8 @@
     "test:storybook": "test-storybook --stories-json --coverage",
     "test:storybook:update": "npm run test:storybook -- --updateSnapshot"
   },
-  "files": [
-    "ExampleComponent.mjs",
-    "exampleFunction.mjs",
-    "exampleStyles.css"
-  ],
+  "files": [],
   "exports": {
-    "./ExampleComponent.mjs": "./ExampleComponent.mjs",
-    "./exampleFunction.mjs": "./exampleFunction.mjs",
-    "./exampleStyles.css": "./exampleStyles.css",
     "./package.json": "./package.json"
   },
   "dependencies": {

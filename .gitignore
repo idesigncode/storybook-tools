@@ -19,6 +19,3 @@ __snapshots__/failed/
 
 # Build files
 storybook-static/
-/exampleFunction.mjs
-/exampleStyles.css
-/ExampleComponent.mjs
