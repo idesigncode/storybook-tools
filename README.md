@@ -12,6 +12,10 @@ Check out the [documentation](https://idesigncode-storybook-components.netlify.a
 npm i @idesigncode/storybook-components --save
 ```
 
+## Features
+
+- 🌙 [DocsContainer](https://idesigncode-storybook-components.netlify.app/?path=/docs/configuration-docscontainer--docs): dark mode support for Storybook Docs with [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode).
+
 ## Requirements
 
 ```

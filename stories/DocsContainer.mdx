@@ -1,0 +1,10 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as DocsContainerStories from './DocsContainer.stories.mjs';
+
+<Meta of={DocsContainerStories} />
+
+# DocsContainer
+
+The `DocsContainer` applies the light and dark theme functionality and should be used in `.storybook/preview.mjs`:
+
+<Story of={DocsContainerStories.DocsContainerConfig} />
