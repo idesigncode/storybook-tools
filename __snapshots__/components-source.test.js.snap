@@ -370,7 +370,7 @@ exports[`Components/Source Env test 1`] = `
 `;
 
 exports[`Components/Source Props test 1`] = `
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>

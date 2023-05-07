@@ -71,7 +71,7 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
 `;
 
 exports[`Components/DefaultValue Automatic Type test 1`] = `
-<div class="defaultValue sb-anchor">
+<div class="defaultValue sb-unstyled">
   <table>
     <tbody>
       <tr>
@@ -210,7 +210,7 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
 `;
 
 exports[`Components/DefaultValue Manual Type With Link test 1`] = `
-<div class="defaultValue sb-anchor">
+<div class="defaultValue sb-unstyled">
   <table>
     <tbody>
       <tr>
@@ -237,7 +237,7 @@ exports[`Components/DefaultValue Manual Type With Link test 1`] = `
 `;
 
 exports[`Components/DefaultValue Props test 1`] = `
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>
@@ -458,7 +458,7 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
 `;
 
 exports[`Components/DefaultValue Ref Type test 1`] = `
-<div class="defaultValue sb-anchor">
+<div class="defaultValue sb-unstyled">
   <table>
     <tbody>
       <tr>
