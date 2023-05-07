@@ -15,7 +15,7 @@ const DefaultValue = ({ link: initialLink, type, value }) => {
   }
 
   return (
-    <div className="defaultValue sb-anchor">
+    <div className="defaultValue sb-unstyled">
       <table>
         <tbody>
           <tr>

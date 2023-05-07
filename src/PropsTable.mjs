@@ -62,7 +62,7 @@ const PropsTable = ({ children, hideChildren = false, props = {} }) => {
       {hideChildren !== true && (
         <div className="example sb-unstyled">{children}</div>
       )}
-      <div className="propsTable sb-anchor">
+      <div className="propsTable sb-unstyled">
         <table aria-hidden="false">
           <thead>
             <tr>
