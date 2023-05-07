@@ -5,6 +5,9 @@ export default {
     '@storybook/addon-interactions',
     'storybook-dark-mode',
   ],
+  docs: {
+    autodocs: 'tag',
+  },
   framework: {
     name: '@storybook/react-webpack5',
     options: {},
