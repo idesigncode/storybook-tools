@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Components/PropsTable All Prop Types test 1`] = `
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>
@@ -1167,7 +1167,7 @@ exports[`Components/PropsTable Automatic Props test 1`] = `
 <div class="example sb-unstyled">
   <input value="test">
 </div>
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>
@@ -1825,7 +1825,7 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
 `;
 
 exports[`Components/PropsTable Manual Type With Required test 1`] = `
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>
@@ -1899,7 +1899,7 @@ exports[`Components/PropsTable Manual Type With Required test 1`] = `
 `;
 
 exports[`Components/PropsTable Props test 1`] = `
-<div class="propsTable sb-anchor">
+<div class="propsTable sb-unstyled">
   <table aria-hidden="false">
     <thead>
       <tr>
