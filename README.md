@@ -24,11 +24,6 @@ npm i @idesigncode/storybook-tools --save
 
 ## Requirements
 
-```
-node ^18.0.0
-react ^18.0.0
-storybook ^7.0.0
-```
-
+- See [peer dependencies](package.json)
 - The [Raw Imports](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-raw-imports--docs) feature requires the default [Webpack builder](https://storybook.js.org/docs/react/builders/webpack) for Storybook.
 - A small amount of [configuration](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-css--docs) for default styles.
