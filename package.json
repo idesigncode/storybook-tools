@@ -23,7 +23,6 @@
   ],
   "scripts": {
     "eslint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
-    "postprepare": "node .npm-postprepare.cjs",
     "prepare": "npm run prepare:clean && npm run prepare:css && npm run prepare:js && husky install",
     "prepare:clean": "node .npm-prepare-clean.cjs",
     "prepare:css": "sass --no-source-map src/styles.scss:./styles.css && postcss *.css -d .",
