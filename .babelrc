@@ -9,5 +9,5 @@
     ],
     "@babel/preset-react"
   ],
-  "plugins": ["istanbul", "inline-react-svg", "react-docgen"]
+  "plugins": ["istanbul", "react-docgen"]
 }
