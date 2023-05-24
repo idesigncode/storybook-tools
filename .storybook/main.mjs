@@ -1,6 +1,13 @@
 export default {
   addons: [
-    '@storybook/addon-coverage',
+    {
+      name: '@storybook/addon-coverage',
+      options: {
+        istanbul: {
+          include: ['**/src/**'],
+        },
+      },
+    },
     '@storybook/addon-docs',
     '@storybook/addon-interactions',
     'storybook-dark-mode',
