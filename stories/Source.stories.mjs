@@ -63,9 +63,18 @@ export const Dark = {
 export const Env = {
   args: {
     code: [
-      `// .env`,
-      `PACKAGE_NAME=$npm_package_name // Uses 'name' from package.json`,
+      `// .storybook/main.mjs`,
+      `import * as packageJson from '../package.json';`,
+      ``,
+      `export default {`,
+      `  env: (config) => ({`,
+      `    ...config,`,
+      `    PACKAGE_NAME: packageJson.name, // Note: "name" is already a string`,
+      `  }),`,
+      `  // ...main.mjs configuration`,
+      `};`,
     ].join('\n'),
+    importPathReplacer: false,
   },
 };
 

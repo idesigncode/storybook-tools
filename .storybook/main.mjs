@@ -1,3 +1,5 @@
+import * as packageJson from '../package.json';
+
 export default {
   addons: [
     {
@@ -15,6 +17,10 @@ export default {
   docs: {
     autodocs: 'tag',
   },
+  env: (config) => ({
+    ...config,
+    PACKAGE_NAME: packageJson.name,
+  }),
   framework: {
     name: '@storybook/react-webpack5',
     options: {},

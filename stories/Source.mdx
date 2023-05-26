@@ -28,15 +28,17 @@ The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](
 
 ### Import Path Replacement (optional):
 
-By default, the import path replacement functionality is disabled unless `process.env.PACKAGE_NAME` has a value.
+The `Source` component can also display all relative [file import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) paths as they would be used by a consumer of your code.
 
-You can set `process.env.PACKAGE_NAME` to automatically show all relative [file import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) paths as they would be used by a consumer of your code:
+By default, this functionality is disabled unless `process.env.PACKAGE_NAME` has a value.
+
+You can also disable import path replacements on each instance of `Source` by setting `importPathReplacer` to `false` or an empty string.
+
+To use import path replacements, set `process.env.PACKAGE_NAME` with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
 
 <Story of={SourceStories.Env} />
 
 Alternatively you can supply your own string for `importPathReplacer` directly on each instance of `Source`.
-
-You can also disable import path replacements by setting `importPathReplacer` to `false` or an empty string.
 
 For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
