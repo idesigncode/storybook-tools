@@ -11,7 +11,7 @@ export const Example = {
       `// Stories of Component.mjs`,
       `import ComponentRaw from './Component.mjs?raw'`,
     ].join('\n'),
-    importPathReplacer: false,
+    importPathReplacements: false,
   },
 };
 

@@ -19,7 +19,11 @@ export default {
   },
   env: (config) => ({
     ...config,
-    PACKAGE_NAME: packageJson.name,
+    IMPORT_PATH_REPLACEMENTS: JSON.stringify({
+      '../': '', // ? Remove "parent directory" relative path segments
+      './': '', // ? Remove "current directory" relative path segments
+      'src/': `${packageJson.name}/`, // ? Prepend package name
+    }),
   }),
   framework: {
     name: '@storybook/react-webpack5',

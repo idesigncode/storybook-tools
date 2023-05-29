@@ -54,9 +54,7 @@ export const AutomaticProps = {
   },
 };
 
-const InputWithPropsRawWithoutSrcProps = InputWithPropsRaw
-  // Remove "src/" from import paths
-  .replace('src/', '')
+const InputWithPropsRawWithoutProps = InputWithPropsRaw
   // Remove "props" from example component
   .replace(/\s?{?\.*?props}?/gm, '');
 
@@ -65,7 +63,7 @@ export const AutomaticPropsSource = {
     <Source
       code={[
         `// InputWithProps.mjs (the "example component")`,
-        ...InputWithPropsRawWithoutSrcProps,
+        ...InputWithPropsRawWithoutProps,
       ].join('\n')}
       removePropsTable={false}
     />
@@ -80,23 +78,20 @@ export const RawImport = {
         ``,
         `<Source code={InputWithPropsRaw} />`,
       ].join('\n')}
-      importPathReplacer={false}
+      importPathReplacements={false}
     />
   ),
 };
 
-const InputWithPropsRawWithoutSrcPropsComments =
-  InputWithPropsRawWithoutSrcProps.replace(
-    /(<Input\s*)([^]*)(onChange)/g,
-    '$1$3'
-  );
+const InputWithPropsRawWithoutPropsComments =
+  InputWithPropsRawWithoutProps.replace(/(<Input\s*)([^]*)(onChange)/g, '$1$3');
 
 export const RawImportDisplayedSource = {
   render: () => (
     <Source
       code={[
         `// Source code displayed by <Source code={InputWithPropsRaw} />`,
-        ...InputWithPropsRawWithoutSrcPropsComments,
+        ...InputWithPropsRawWithoutPropsComments,
       ].join('\n')}
     />
   ),
@@ -132,7 +127,7 @@ export const ManualTypeWithRequiredSource = {
         code={prettier.format(
           [
             `// InputWithProps.mjs`,
-            InputWithPropsRawWithoutSrcPropsComments.replace(
+            InputWithPropsRawWithoutPropsComments.replace(
               '<PropsTable>',
               `<PropsTable hideChildren={true} props={${props}}>`
             ),
