@@ -42,14 +42,14 @@ exports[`Components/Source Code test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component Raw Displayed Source test 1`] = `
+exports[`Components/Source Component With Props Raw Displayed Source test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Source code displayed by &lt;Source code={ComponentRaw} /&gt;
+        // Source code displayed by &lt;Source code={ComponentWithPropsRaw} /&gt;
       </span>
       <span class>
       </span>
@@ -122,7 +122,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component Raw test 1`] = `
+exports[`Components/Source Component With Props Raw test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
@@ -192,7 +192,7 @@ exports[`Components/Source Component Raw test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component test 1`] = `
+exports[`Components/Source Component With Props test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"

@@ -87,7 +87,7 @@ const importPathReplacement = [
   `const notAnImport = '../src/notAnImport.mjs';`,
 ];
 
-export const Component = {
+export const ComponentWithProps = {
   args: {
     code: [
       `// ComponentWithProps.mjs (the "example component")`,
@@ -97,7 +97,7 @@ export const Component = {
   },
 };
 
-export const ComponentRaw = {
+export const ComponentWithPropsRaw = {
   args: {
     code: [
       `// Stories of Component.mjs`,
@@ -109,10 +109,10 @@ export const ComponentRaw = {
   },
 };
 
-export const ComponentRawDisplayedSource = {
+export const ComponentWithPropsRawDisplayedSource = {
   args: {
     code: [
-      `// Source code displayed by <Source code={ComponentRaw} />`,
+      `// Source code displayed by <Source code={ComponentWithPropsRaw} />`,
       ...importPathReplacement,
     ].join('\n'),
   },
