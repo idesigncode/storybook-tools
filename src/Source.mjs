@@ -15,7 +15,7 @@ const preserveComment = '// preserve-path';
 const Source = ({
   code,
   dark = null,
-  importPathReplacer = process.env.PACKAGE_NAME,
+  importPathReplacements = process.env.IMPORT_PATH_REPLACEMENTS,
   removePropsTable = true,
 }) => {
   const isDarkMode = useDarkMode();
@@ -41,15 +41,39 @@ const Source = ({
   }
 
   if (
-    importPathReplacer &&
-    importPathReplacer.length &&
+    importPathReplacements &&
+    typeof importPathReplacements === 'string' &&
+    importPathReplacements.startsWith('{') &&
     codeString.includes('import ')
   ) {
-    // ? Replace relative import paths with "importPathReplacer" if import declaration line without "preserve-path" comment
-    codeString = codeString.replace(
-      /(^import.*\s['"])(\.(\.)*\/)+(?!.*preserve-path)/gm,
-      `$1${importPathReplacer}/`
-    );
+    const importPathReplacementsObject = JSON.parse(importPathReplacements);
+
+    codeString = codeString
+      .split('\n')
+      .map((line) => {
+        // ? If line is an import declaration without "preserve-path" comment
+        if (
+          line.startsWith('import ') &&
+          !line.trim().includes(preserveComment)
+        ) {
+          // ? Get import path from line
+          const [, importPath] = line.split(/['"]/g);
+
+          // ? Perform import paths replacements to create a new path string
+          let exportPath = importPath;
+          Object.keys(importPathReplacementsObject).map((key) => {
+            exportPath = exportPath.replace(
+              key,
+              importPathReplacementsObject[key]
+            );
+          });
+
+          // ? Replace existing import path with new path string
+          return line.replace(importPath, exportPath);
+        }
+        return line;
+      })
+      .join('\n');
 
     // ? Remove "preserve-path" comments
     if (codeString.includes(preserveComment)) {
@@ -72,7 +96,10 @@ const Source = ({
 Source.propTypes = {
   code: PropTypes.string.isRequired,
   dark: PropTypes.bool,
-  importPathReplacer: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+  importPathReplacements: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.bool,
+  ]),
   removePropsTable: PropTypes.bool,
 };
 
