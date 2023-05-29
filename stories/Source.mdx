@@ -26,17 +26,27 @@ The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](
 > - As `Source` is designed to show production-ready source code, it will automatically remove any use of [PropsTable](/docs/components-propstable--docs).
 > - This can be disabled by setting `removePropsTable` to `false`.
 
-### Import Path Replacement (optional):
+### Import Path Replacements (optional):
 
-By default, the import path replacement functionality is disabled unless `process.env.PACKAGE_NAME` has a value.
+The `Source` component can also display all [file import paths](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) as they would be used by a consumer of your code.
 
-You can set `process.env.PACKAGE_NAME` to automatically show all relative [file import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) paths as they would be used by a consumer of your code:
+By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified "key-value pair" object:
+
+- `[key]` - a string pattern to match within an import path.
+- `[value]` - a string to replace the matched `[key]` pattern string.
+
+To use import path replacements globally, you can add this configuration with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
 
 <Story of={SourceStories.Env} />
 
-Alternatively you can supply your own string for `importPathReplacer` directly on each instance of `Source`.
+> #### Note:
+>
+> - You can alternatively use a `.env` file to set `IMPORT_PATH_REPLACEMENTS`.
+> - Import path replacements are performed in order.
 
-You can also disable import path replacements by setting `importPathReplacer` to `false` or an empty string.
+Alternatively you can supply your own value for `importPathReplacements` directly on each instance of `Source`.
+
+You can also disable import path replacements on each instance of `Source` by setting `importPathReplacements` to `false`.
 
 For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
@@ -48,7 +58,7 @@ For further control, you can also use the inline comment `// preserve-path` to o
 
 > #### Note:
 >
-> - Any use of the `// preserve-path` will be removed from the displayed source code if `importPathReplacer` has a non-empty string value.
+> - Any use of the `// preserve-path` will be removed from the displayed source code of each `Source` that uses import path replacements.
 >
 > #### See also:
 >

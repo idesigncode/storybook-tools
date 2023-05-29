@@ -18,12 +18,9 @@ export const Props = {
         type: 'boolean',
         value: 'useDarkMode()',
       },
-      code: {
-        type: 'string',
-      },
-      importPathReplacer: {
+      importPathReplacements: {
         type: 'string || boolean',
-        value: 'process.env.PACKAGE_NAME',
+        value: 'process.env.IMPORT_PATH_REPLACEMENTS',
       },
     },
     hideChildren: true,
@@ -63,23 +60,40 @@ export const Dark = {
 export const Env = {
   args: {
     code: [
-      `// .env`,
-      `PACKAGE_NAME=$npm_package_name // Uses 'name' from package.json`,
+      `// .storybook/main.mjs`,
+      `import * as packageJson from '../package.json';`,
+      ``,
+      `export default {`,
+      `  env: (config) => ({`,
+      `    ...config,`,
+      `    IMPORT_PATH_REPLACEMENTS: JSON.stringify({`,
+      `      // The [value] will replace the [key] matched within an import path`,
+      `      '../': '', // ? Remove "parent directory" relative path segments`,
+      `      './': '', // ? Remove "current directory" relative path segments`,
+      `      'src/': \`\${packageJson.name}/\`, // ? Prepend package name`,
+      `    }),`,
+      `  }),`,
+      `  // ...main.mjs configuration`,
+      `};`,
     ].join('\n'),
+    importPathReplacements: false,
   },
 };
 
 const importPathReplacement = [
-  `import Replace from './../Replace.mjs';`,
-  `import Preserve from './../Preserve.mjs'; // preserve-path`,
+  `import Component from '../src/Component.mjs';`,
+  `import Preserve from '../src/Preserve.mjs'; // preserve-path`,
   ``,
-  `const notAnImport = './../Replace.mjs';`,
+  `const notAnImport = '../src/notAnImport.mjs';`,
 ];
 
 export const Component = {
   args: {
-    code: [`// Component.mjs`, ...importPathReplacement].join('\n'),
-    importPathReplacer: false,
+    code: [
+      `// ComponentWithProps.mjs (the "example component")`,
+      ...importPathReplacement,
+    ].join('\n'),
+    importPathReplacements: false,
   },
 };
 
@@ -87,11 +101,11 @@ export const ComponentRaw = {
   args: {
     code: [
       `// Stories of Component.mjs`,
-      `import ComponentRaw from './Component.mjs?raw';`,
+      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
       ``,
-      `<Source code={ComponentRaw} />`,
+      `<Source code={ComponentWithPropsRaw} />`,
     ].join('\n'),
-    importPathReplacer: false,
+    importPathReplacements: false,
   },
 };
 

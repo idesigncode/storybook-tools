@@ -9,9 +9,9 @@ export const Example = {
   args: {
     code: [
       `// Stories of Component.mjs`,
-      `import ComponentRaw from './Component.mjs?raw'`,
+      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
     ].join('\n'),
-    importPathReplacer: false,
+    importPathReplacements: false,
   },
 };
 
