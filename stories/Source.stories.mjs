@@ -2,6 +2,7 @@ import React from 'react';
 import { expect, jest } from '@storybook/jest';
 import { userEvent, within } from '@storybook/testing-library';
 import { useDarkMode } from 'storybook-dark-mode';
+import * as packageJson from '../package.json';
 import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
 
@@ -57,30 +58,7 @@ export const Dark = {
   },
 };
 
-export const Env = {
-  args: {
-    code: [
-      `// .storybook/main.mjs`,
-      `import * as packageJson from '../package.json';`,
-      ``,
-      `export default {`,
-      `  env: (config) => ({`,
-      `    ...config,`,
-      `    IMPORT_PATH_REPLACEMENTS: JSON.stringify({`,
-      `      // The [value] will replace the [key] matched within an import path`,
-      `      '../': '', // ? Remove "parent directory" relative path segments`,
-      `      './': '', // ? Remove "current directory" relative path segments`,
-      `      'src/': \`\${packageJson.name}/\`, // ? Prepend package name`,
-      `    }),`,
-      `  }),`,
-      `  // ...main.mjs configuration`,
-      `};`,
-    ].join('\n'),
-    importPathReplacements: false,
-  },
-};
-
-const importPathReplacement = [
+const componentWithProps = [
   `import Component from '../src/Component.mjs';`,
   `import Preserve from '../src/Preserve.mjs'; // preserve-path`,
   ``,
@@ -91,7 +69,7 @@ export const ComponentWithProps = {
   args: {
     code: [
       `// ComponentWithProps.mjs (the "example component")`,
-      ...importPathReplacement,
+      ...componentWithProps,
     ].join('\n'),
     importPathReplacements: false,
   },
@@ -102,8 +80,17 @@ export const ComponentWithPropsRaw = {
     code: [
       `// Stories of Component.mjs`,
       `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
+      `import * as packageJson from '../package.json';`,
       ``,
-      `<Source code={ComponentWithPropsRaw} />`,
+      `<Source`,
+      `  code={ComponentWithPropsRaw}`,
+      `  importPathReplacements={JSON.stringify({`,
+      `    // The [value] will replace the [key] matched within an import path`,
+      `    '../': '', // ? Remove "parent directory" relative path segments`,
+      `    './': '', // ? Remove "current directory" relative path segments`,
+      `    'src/': \`\${packageJson.name}/\`, // ? Prepend package name`,
+      `  })}`,
+      `/>`,
     ].join('\n'),
     importPathReplacements: false,
   },
@@ -112,8 +99,13 @@ export const ComponentWithPropsRaw = {
 export const ComponentWithPropsRawDisplayedSource = {
   args: {
     code: [
-      `// Source code displayed by <Source code={ComponentWithPropsRaw} />`,
-      ...importPathReplacement,
+      `// Source code displayed with "importPathReplacements" applied`,
+      ...componentWithProps,
     ].join('\n'),
+    importPathReplacements: JSON.stringify({
+      '../': '',
+      './': '',
+      'src/': `${packageJson.name}/`,
+    }),
   },
 };

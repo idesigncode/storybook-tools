@@ -49,7 +49,7 @@ exports[`Components/Source Component With Props Raw Displayed Source test 1`] = 
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Source code displayed by &lt;Source code={ComponentWithPropsRaw} /&gt;
+        // Source code displayed with "importPathReplacements" applied
       </span>
       <span class>
       </span>
@@ -156,11 +156,44 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       </span>
       <span class>
       </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        *
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        as
+      </span>
+      <span class>
+        packageJson
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '../package.json'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
       <span class="token tag punctuation">
         &lt;
       </span>
       <span class="token tag class-name">
         Source
+      </span>
+      <span class="token tag">
       </span>
       <span class="token tag">
       </span>
@@ -178,6 +211,146 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        importPathReplacements
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript constant">
+        JSON
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        .
+      </span>
+      <span class="token tag script language-javascript function">
+        stringify
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        (
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // The [value] will replace the [key] matched within an import path
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        '../'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        ''
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // ? Remove "parent directory" relative path segments
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        './'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        ''
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // ? Remove "current directory" relative path segments
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        'src/'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        \${
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        packageJson
+      </span>
+      <span class="token tag script language-javascript template-string interpolation punctuation">
+        .
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        name
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript template-string string">
+        /
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // ? Prepend package name
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        )
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
       </span>
       <span class="token tag">
       </span>
@@ -327,285 +500,6 @@ exports[`Components/Source Dark test 1`] = `
       </span>
       <span class="token tag punctuation">
         /&gt;
-      </span>
-    </code>
-  </pre>
-  <button>
-    Copy
-  </button>
-</div>
-`;
-
-exports[`Components/Source Env test 1`] = `
-<div class="Source sb-unstyled ">
-  <pre class="prismjs">
-    <code class="language-jsx"
-          style="white-space: pre;"
-    >
-      <span class="token comment">
-        // .storybook/main.mjs
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        import
-      </span>
-      <span class>
-      </span>
-      <span class="token operator">
-        *
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        as
-      </span>
-      <span class>
-        packageJson
-      </span>
-      <span class="token keyword">
-        from
-      </span>
-      <span class>
-      </span>
-      <span class="token string">
-        '../package.json'
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        export
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        default
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token function-variable function">
-        env
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token parameter">
-        config
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class>
-      </span>
-      <span class="token operator">
-        =&gt;
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token operator">
-        ...
-      </span>
-      <span class>
-        config
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token constant">
-        IMPORT_PATH_REPLACEMENTS
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token constant">
-        JSON
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class="token function">
-        stringify
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // The [value] will replace the [key] matched within an import path
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token string-property property">
-        '../'
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token string">
-        ''
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ? Remove "parent directory" relative path segments
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token string-property property">
-        './'
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token string">
-        ''
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ? Remove "current directory" relative path segments
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token string-property property">
-        'src/'
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token template-string interpolation interpolation-punctuation punctuation">
-        \${
-      </span>
-      <span class="token template-string interpolation">
-        packageJson
-      </span>
-      <span class="token template-string interpolation punctuation">
-        .
-      </span>
-      <span class="token template-string interpolation">
-        name
-      </span>
-      <span class="token template-string interpolation interpolation-punctuation punctuation">
-        }
-      </span>
-      <span class="token template-string string">
-        /
-      </span>
-      <span class="token template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ? Prepend package name
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ...main.mjs configuration
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        ;
       </span>
     </code>
   </pre>
