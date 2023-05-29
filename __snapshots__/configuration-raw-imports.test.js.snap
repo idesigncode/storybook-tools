@@ -17,7 +17,7 @@ exports[`Configuration/Raw Imports Example test 1`] = `
         import
       </span>
       <span class>
-        ComponentRaw
+        ComponentWithPropsRaw
       </span>
       <span class="token keyword">
         from
@@ -25,7 +25,10 @@ exports[`Configuration/Raw Imports Example test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './Component.mjs?raw'
+        './ComponentWithProps.mjs?raw'
+      </span>
+      <span class="token punctuation">
+        ;
       </span>
     </code>
   </pre>

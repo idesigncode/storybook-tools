@@ -74,6 +74,7 @@ export const RawImport = {
   render: () => (
     <Source
       code={[
+        `// Stories of Input.mjs`,
         `import InputWithPropsRaw from './InputWithProps.mjs?raw';`,
         ``,
         `<Source code={InputWithPropsRaw} />`,
@@ -126,7 +127,7 @@ export const ManualTypeWithRequiredSource = {
       <Source
         code={prettier.format(
           [
-            `// InputWithProps.mjs`,
+            `// InputWithProps.mjs (the "example component")`,
             InputWithPropsRawWithoutPropsComments.replace(
               '<PropsTable>',
               `<PropsTable hideChildren={true} props={${props}}>`

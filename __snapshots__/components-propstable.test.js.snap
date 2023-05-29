@@ -1317,7 +1317,7 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // InputWithProps.mjs
+        // InputWithProps.mjs (the "example component")
       </span>
       <span class>
       </span>
@@ -2374,6 +2374,13 @@ exports[`Components/PropsTable Raw Import test 1`] = `
     <code class="language-jsx"
           style="white-space: pre;"
     >
+      <span class="token comment">
+        // Stories of Input.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
       <span class="token keyword">
         import
       </span>
