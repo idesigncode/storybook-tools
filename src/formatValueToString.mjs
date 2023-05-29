@@ -28,13 +28,13 @@ const formatValueToString = (value, valueType) => {
   }
 
   if (valueType === 'function') {
-    const functionName = value.name ? '' : 'function _';
+    const functionName = value.name ? '' : 'function temporary';
     return prettier
       .format(`${functionName}${value}`, {
         parser: 'babel',
         plugins: [prettierBabel],
       })
-      .replace(functionName ? '^function _' : '', '');
+      .replace(functionName ? /^function temporary/ : '', '');
   }
 
   if (valueType === 'array' || valueType.includes('object')) {
