@@ -35,14 +35,13 @@ By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLA
 - `[key]` - a string pattern to match within an import path.
 - `[value]` - a string to replace the matched `[key]` pattern string.
 
-To use import path replacements globally, you can add this configuration with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
+To use import path replacements globally, you can add this configuration to an `.env` file or with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
 
 <Story of={SourceStories.Env} />
 
 > #### Note:
 >
-> - You can alternatively use a `.env` file to set `IMPORT_PATH_REPLACEMENTS`.
-> - Import path replacements are performed in order.
+> - Import path replacements are performed in the order specified.
 
 Alternatively you can supply your own value for `importPathReplacements` directly on each instance of `Source`.
 
