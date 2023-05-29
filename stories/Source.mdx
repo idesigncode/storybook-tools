@@ -30,36 +30,29 @@ The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](
 
 The `Source` component can also display all [file import paths](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) as they would be used by a consumer of your code.
 
-By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified "key-value pair" object:
+Please see [Import Path Replacements](/docs/configuration-import-path-replacements--docs) for setting global (default) configuration of all instances of `Source`.
+
+Alternatively, you can override the global configuration by supplying a stringified "key-value pair" object for `importPathReplacements` directly:
 
 - `[key]` - a string pattern to match within an import path.
 - `[value]` - a string to replace the matched `[key]` pattern string.
 
-To use import path replacements globally, you can add this configuration with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
+For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
-<Story of={SourceStories.Env} />
+<Story of={SourceStories.ComponentWithProps} />
 
-> #### Note:
->
-> - You can alternatively use a `.env` file to set `IMPORT_PATH_REPLACEMENTS`.
-> - Import path replacements are performed in order.
+<Story of={SourceStories.ComponentWithPropsRaw} />
 
-Alternatively you can supply your own value for `importPathReplacements` directly on each instance of `Source`.
+<Story of={SourceStories.ComponentWithPropsRawDisplayedSource} />
 
 You can also disable import path replacements on each instance of `Source` by setting `importPathReplacements` to `false`.
 
-For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
-
-<Story of={SourceStories.Component} />
-
-<Story of={SourceStories.ComponentRaw} />
-
-<Story of={SourceStories.ComponentRawDisplayedSource} />
-
 > #### Note:
 >
+> - Import path replacements are performed in order specified.
 > - Any use of the `// preserve-path` will be removed from the displayed source code of each `Source` that uses import path replacements.
 >
 > #### See also:
 >
+> - [Import Path Replacements](/docs/configuration-import-path-replacements--docs) - global (default) import path replacements configuration of all instances of `Source`.
 > - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.
