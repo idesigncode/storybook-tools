@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A collection of tools & React components for use with Storybook.",
   "keywords": [
     "react",
