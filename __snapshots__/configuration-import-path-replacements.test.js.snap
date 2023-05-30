@@ -159,7 +159,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Remove "parent directory" relative path segments
+        // Remove "parent directory" relative path segments
       </span>
       <span class>
       </span>
@@ -182,7 +182,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Remove "current directory" relative path segments
+        // Remove "current directory" relative path segments
       </span>
       <span class>
       </span>
@@ -190,6 +190,29 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       </span>
       <span class="token string-property property">
         'src/'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        ''
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Remove "src directory" path segments
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
+        '^'
       </span>
       <span class="token operator">
         :
@@ -226,7 +249,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Prepend package name
+        // Prepend package name
       </span>
       <span class>
       </span>

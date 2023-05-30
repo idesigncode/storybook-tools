@@ -268,7 +268,7 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript comment">
-        // ? Remove "parent directory" relative path segments
+        // Remove "parent directory" relative path segments
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -291,7 +291,7 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript comment">
-        // ? Remove "current directory" relative path segments
+        // Remove "current directory" relative path segments
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -299,6 +299,29 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       </span>
       <span class="token tag script language-javascript string-property property">
         'src/'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        ''
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Remove "src directory" path segments
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        '^'
       </span>
       <span class="token tag script language-javascript operator">
         :
@@ -335,7 +358,7 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript comment">
-        // ? Prepend package name
+        // Prepend package name
       </span>
       <span class="token tag script language-javascript">
       </span>

@@ -86,9 +86,10 @@ export const ComponentWithPropsRaw = {
       `  code={ComponentWithPropsRaw}`,
       `  importPathReplacements={JSON.stringify({`,
       `    // The [value] will replace the [key] matched within an import path`,
-      `    '../': '', // ? Remove "parent directory" relative path segments`,
-      `    './': '', // ? Remove "current directory" relative path segments`,
-      `    'src/': \`\${packageJson.name}/\`, // ? Prepend package name`,
+      `    '../': '', // Remove "parent directory" relative path segments`,
+      `    './': '', // Remove "current directory" relative path segments`,
+      `    'src/': '', // Remove "src directory" path segments`,
+      `    '^': \`\${packageJson.name}/\`, // Prepend package name`,
       `  })}`,
       `/>`,
     ].join('\n'),
@@ -105,7 +106,8 @@ export const ComponentWithPropsRawDisplayedSource = {
     importPathReplacements: JSON.stringify({
       '../': '',
       './': '',
-      'src/': `${packageJson.name}/`,
+      'src/': '',
+      '^': `${packageJson.name}/`,
     }),
   },
 };

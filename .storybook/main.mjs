@@ -22,7 +22,8 @@ export default {
     IMPORT_PATH_REPLACEMENTS: JSON.stringify({
       '../': '', // ? Remove "parent directory" relative path segments
       './': '', // ? Remove "current directory" relative path segments
-      'src/': `${packageJson.name}/`, // ? Prepend package name
+      'src/': '', // ? Remove "src directory" path segments
+      '^': `${packageJson.name}/`, // ? Prepend package name
     }),
   }),
   framework: {

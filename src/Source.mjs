@@ -62,8 +62,9 @@ const Source = ({
           // ? Perform import paths replacements to create a new path string
           let exportPath = importPath;
           Object.keys(importPathReplacementsObject).map((key) => {
-            exportPath = exportPath.replace(
-              key,
+            exportPath = exportPath.replaceAll(
+              // ? Allow prepending strings without replacement
+              key === '^' ? /^/g : key,
               importPathReplacementsObject[key]
             );
           });
