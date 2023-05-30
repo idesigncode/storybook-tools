@@ -252,6 +252,50 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript string-property property">
+        '^'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        \${
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        packageJson
+      </span>
+      <span class="token tag script language-javascript template-string interpolation punctuation">
+        .
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        name
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript template-string string">
+        /
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Prepend package name to relative paths
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
         '../'
       </span>
       <span class="token tag script language-javascript operator">
@@ -315,50 +359,6 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       </span>
       <span class="token tag script language-javascript comment">
         // Remove "src directory" path segments
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
-      <span class="token tag script language-javascript string-property property">
-        '^'
-      </span>
-      <span class="token tag script language-javascript operator">
-        :
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
-      <span class="token tag script language-javascript template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
-        \${
-      </span>
-      <span class="token tag script language-javascript template-string interpolation">
-        packageJson
-      </span>
-      <span class="token tag script language-javascript template-string interpolation punctuation">
-        .
-      </span>
-      <span class="token tag script language-javascript template-string interpolation">
-        name
-      </span>
-      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
-        }
-      </span>
-      <span class="token tag script language-javascript template-string string">
-        /
-      </span>
-      <span class="token tag script language-javascript template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token tag script language-javascript punctuation">
-        ,
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
-      <span class="token tag script language-javascript comment">
-        // Prepend package name
       </span>
       <span class="token tag script language-javascript">
       </span>

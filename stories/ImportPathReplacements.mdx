@@ -9,8 +9,8 @@ The [Source](/docs/components-source--docs) component can automatically display 
 
 By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified "key-value pair" object:
 
-- `[key]` - a string pattern to match within an import path (also accepts `^` to prepend a value).
-- `[value]` - a string to replace the matched `[key]` pattern string.
+- `[key]` - a string to match within an import path (also accepts `^` to prepend relative paths).
+- `[value]` - a string to replace the matched `[key]` string.
 
 > #### Note:
 >

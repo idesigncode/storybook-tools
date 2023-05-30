@@ -143,6 +143,50 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string-property property">
+        '^'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token template-string interpolation interpolation-punctuation punctuation">
+        \${
+      </span>
+      <span class="token template-string interpolation">
+        packageJson
+      </span>
+      <span class="token template-string interpolation punctuation">
+        .
+      </span>
+      <span class="token template-string interpolation">
+        name
+      </span>
+      <span class="token template-string interpolation interpolation-punctuation punctuation">
+        }
+      </span>
+      <span class="token template-string string">
+        /
+      </span>
+      <span class="token template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Prepend package name to relative paths
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
         '../'
       </span>
       <span class="token operator">
@@ -206,50 +250,6 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       </span>
       <span class="token comment">
         // Remove "src directory" path segments
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token string-property property">
-        '^'
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token template-string interpolation interpolation-punctuation punctuation">
-        \${
-      </span>
-      <span class="token template-string interpolation">
-        packageJson
-      </span>
-      <span class="token template-string interpolation punctuation">
-        .
-      </span>
-      <span class="token template-string interpolation">
-        name
-      </span>
-      <span class="token template-string interpolation interpolation-punctuation punctuation">
-        }
-      </span>
-      <span class="token template-string string">
-        /
-      </span>
-      <span class="token template-string template-punctuation string">
-        \`
-      </span>
-      <span class="token punctuation">
-        ,
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // Prepend package name
       </span>
       <span class>
       </span>
