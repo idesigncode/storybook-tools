@@ -62,10 +62,12 @@ const Source = ({
           // ? Perform import paths replacements to create a new path string
           let exportPath = importPath;
           Object.keys(importPathReplacementsObject).map((key) => {
-            exportPath = exportPath.replace(
-              key,
-              importPathReplacementsObject[key]
-            );
+            exportPath =
+              key === '^' && exportPath.startsWith('.')
+                ? // ? Prepend relative paths with value
+                  `${importPathReplacementsObject[key]}${exportPath}`
+                : // ? Replace key in path with value
+                  exportPath.replaceAll(key, importPathReplacementsObject[key]);
           });
 
           // ? Replace existing import path with new path string

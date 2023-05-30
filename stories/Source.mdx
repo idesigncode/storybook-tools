@@ -34,8 +34,13 @@ Please see [Import Path Replacements](/docs/configuration-import-path-replacemen
 
 Alternatively, you can override the global configuration by supplying a stringified "key-value pair" object for `importPathReplacements` directly:
 
-- `[key]` - a string pattern to match within an import path.
-- `[value]` - a string to replace the matched `[key]` pattern string.
+- `[key]` - a string to match within an import path (also accepts `^` to prepend relative paths).
+- `[value]` - a string to replace the matched `[key]` string.
+
+> #### Note:
+>
+> - Import path replacements are performed in the order specified.
+> - Matches may occur more than once within an import path.
 
 For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
@@ -49,7 +54,6 @@ You can also disable import path replacements on each instance of `Source` by se
 
 > #### Note:
 >
-> - Import path replacements are performed in order specified.
 > - Any use of the `// preserve-path` will be removed from the displayed source code of each `Source` that uses import path replacements.
 >
 > #### See also:

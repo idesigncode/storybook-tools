@@ -20,9 +20,10 @@ export default {
   env: (config) => ({
     ...config,
     IMPORT_PATH_REPLACEMENTS: JSON.stringify({
+      '^': `${packageJson.name}/`, // ? Prepend package name to relative paths
       '../': '', // ? Remove "parent directory" relative path segments
       './': '', // ? Remove "current directory" relative path segments
-      'src/': `${packageJson.name}/`, // ? Prepend package name
+      'src/': '', // ? Remove "src directory" path segments
     }),
   }),
   framework: {
