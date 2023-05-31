@@ -18,7 +18,7 @@ const ComponentWithProps = () => {
             [],
             true,
             Input,
-            () => {},
+            function () {},
             <Input key={Input} />,
             null,
             1,
@@ -29,7 +29,7 @@ const ComponentWithProps = () => {
           ]}
           boolean={true}
           elementType={Component}
-          function={() => {}}
+          function={function () {}}
           node={<Component as={Input} />}
           null={null}
           number={1}
@@ -37,7 +37,7 @@ const ComponentWithProps = () => {
             array: [],
             boolean: true,
             elementType: Component,
-            function: (() => function () {})(),
+            function: function () {},
             node: document.createElement('div'),
             null: null,
             number: 0,

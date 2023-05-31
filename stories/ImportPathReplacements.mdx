@@ -1,0 +1,27 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as ImportPathReplacementsStories from './ImportPathReplacements.stories.mjs';
+
+<Meta of={ImportPathReplacementsStories} />
+
+# Import Path Replacements (optional):
+
+The [Source](/docs/components-source--docs) component can automatically display all [file import paths](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) as they would be used by a consumer of your code.
+
+By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified "key-value pair" object:
+
+- `[key]` - a string to match within an import path (also accepts `^` to prepend relative paths).
+- `[value]` - a string to replace the matched `[key]` string.
+
+> #### Note:
+>
+> - Import path replacements are performed in the order specified.
+> - Matches may occur more than once within an import path.
+
+To use import path replacements globally, you can add the configuration to an `.env` file or with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
+
+<Story of={ImportPathReplacementsStories.Env} />
+
+> #### See also:
+>
+> - [Source](/docs/components-source--docs) - further information and examples of using import path replacements to display source code.
+> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.

@@ -2,6 +2,7 @@ import React from 'react';
 import { expect, jest } from '@storybook/jest';
 import { userEvent, within } from '@storybook/testing-library';
 import { useDarkMode } from 'storybook-dark-mode';
+import * as packageJson from '../package.json';
 import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
 
@@ -18,12 +19,9 @@ export const Props = {
         type: 'boolean',
         value: 'useDarkMode()',
       },
-      code: {
-        type: 'string',
-      },
-      importPathReplacer: {
+      importPathReplacements: {
         type: 'string || boolean',
-        value: 'process.env.PACKAGE_NAME',
+        value: 'process.env.IMPORT_PATH_REPLACEMENTS',
       },
     },
     hideChildren: true,
@@ -60,46 +58,56 @@ export const Dark = {
   },
 };
 
-export const Env = {
-  args: {
-    code: [
-      `// .env`,
-      `PACKAGE_NAME=$npm_package_name // Uses 'name' from package.json`,
-    ].join('\n'),
-  },
-};
-
-const importPathReplacement = [
-  `import Replace from './../Replace.mjs';`,
-  `import Preserve from './../Preserve.mjs'; // preserve-path`,
+const componentWithProps = [
+  `import Component from '../src/Component.mjs';`,
+  `import Preserve from '../src/Preserve.mjs'; // preserve-path`,
   ``,
-  `const notAnImport = './../Replace.mjs';`,
+  `const notAnImport = '../src/notAnImport.mjs';`,
 ];
 
-export const Component = {
+export const ComponentWithProps = {
   args: {
-    code: [`// Component.mjs`, ...importPathReplacement].join('\n'),
-    importPathReplacer: false,
+    code: [
+      `// ComponentWithProps.mjs (the "example component")`,
+      ...componentWithProps,
+    ].join('\n'),
+    importPathReplacements: false,
   },
 };
 
-export const ComponentRaw = {
+export const ComponentWithPropsRaw = {
   args: {
     code: [
       `// Stories of Component.mjs`,
-      `import ComponentRaw from './Component.mjs?raw';`,
+      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
+      `import * as packageJson from '../package.json';`,
       ``,
-      `<Source code={ComponentRaw} />`,
+      `<Source`,
+      `  code={ComponentWithPropsRaw}`,
+      `  importPathReplacements={JSON.stringify({`,
+      `    // The [value] will replace the [key] matched within an import path`,
+      `    '^': \`\${packageJson.name}/\`, // Prepend package name to relative paths`,
+      `    '../': '', // Remove "parent directory" relative path segments`,
+      `    './': '', // Remove "current directory" relative path segments`,
+      `    'src/': '', // Remove "src directory" path segments`,
+      `  })}`,
+      `/>`,
     ].join('\n'),
-    importPathReplacer: false,
+    importPathReplacements: false,
   },
 };
 
-export const ComponentRawDisplayedSource = {
+export const ComponentWithPropsRawDisplayedSource = {
   args: {
     code: [
-      `// Source code displayed by <Source code={ComponentRaw} />`,
-      ...importPathReplacement,
+      `// Source code displayed with "importPathReplacements" applied`,
+      ...componentWithProps,
     ].join('\n'),
+    importPathReplacements: JSON.stringify({
+      '^': `${packageJson.name}/`,
+      '../': '',
+      './': '',
+      'src/': '',
+    }),
   },
 };

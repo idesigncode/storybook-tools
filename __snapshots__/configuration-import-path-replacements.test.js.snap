@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Configuration/Raw Imports Example test 1`] = `
+exports[`Configuration/Import Path Replacements Env test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // .storybook/main.mjs
       </span>
       <span class>
       </span>
@@ -17,7 +17,17 @@ exports[`Configuration/Raw Imports Example test 1`] = `
         import
       </span>
       <span class>
-        ComponentWithPropsRaw
+      </span>
+      <span class="token operator">
+        *
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        as
+      </span>
+      <span class>
+        packageJson
       </span>
       <span class="token keyword">
         from
@@ -25,27 +35,10 @@ exports[`Configuration/Raw Imports Example test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './ComponentWithProps.mjs?raw'
+        '../package.json'
       </span>
       <span class="token punctuation">
         ;
-      </span>
-    </code>
-  </pre>
-  <button>
-    Copy
-  </button>
-</div>
-`;
-
-exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
-<div class="Source sb-unstyled ">
-  <pre class="prismjs">
-    <code class="language-jsx"
-          style="white-space: pre;"
-    >
-      <span class="token comment">
-        // .storybook/main.mjs
       </span>
       <span class>
       </span>
@@ -69,15 +62,10 @@ exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
       <span class>
       </span>
       <span class="token function-variable function">
-        webpackFinal
+        env
       </span>
       <span class="token operator">
         :
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        async
       </span>
       <span class>
       </span>
@@ -98,170 +86,20 @@ exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
       <span class>
       </span>
       <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
         {
       </span>
       <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        ...
       </span>
       <span class>
         config
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        module
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        rules
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class="token function">
-        map
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token parameter">
-        rule
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class>
-      </span>
-      <span class="token operator">
-        =&gt;
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        if
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token operator">
-        !
-      </span>
-      <span class>
-        rule
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        type
-      </span>
-      <span class="token operator">
-        ||
-      </span>
-      <span class>
-        rule
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        type
-      </span>
-      <span class="token operator">
-        !==
-      </span>
-      <span class>
-      </span>
-      <span class="token string">
-        'asset/source'
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ? Ensure any loaders are not run on any 'raw' file imports
-      </span>
-      <span class>
-      </span>
-      <span class>
-        rule
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        resourceQuery
-      </span>
-      <span class="token operator">
-        =
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class="token literal-property property">
-        not
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        [
-      </span>
-      <span class="token regex regex-delimiter">
-        /
-      </span>
-      <span class="token regex regex-source language-regex">
-        raw
-      </span>
-      <span class="token regex regex-delimiter">
-        /
-      </span>
-      <span class="token punctuation">
-        ]
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
       </span>
       <span class="token punctuation">
         ,
@@ -270,14 +108,148 @@ exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
       </span>
       <span class>
       </span>
-      <span class="token keyword">
-        return
+      <span class="token constant">
+        IMPORT_PATH_REPLACEMENTS
+      </span>
+      <span class="token operator">
+        :
       </span>
       <span class>
-        rule
+      </span>
+      <span class="token constant">
+        JSON
       </span>
       <span class="token punctuation">
-        ;
+        .
+      </span>
+      <span class="token function">
+        stringify
+      </span>
+      <span class="token punctuation">
+        (
+      </span>
+      <span class="token punctuation">
+        {
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // The [value] will replace the [key] matched within an import path
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
+        '^'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token template-string interpolation interpolation-punctuation punctuation">
+        \${
+      </span>
+      <span class="token template-string interpolation">
+        packageJson
+      </span>
+      <span class="token template-string interpolation punctuation">
+        .
+      </span>
+      <span class="token template-string interpolation">
+        name
+      </span>
+      <span class="token template-string interpolation interpolation-punctuation punctuation">
+        }
+      </span>
+      <span class="token template-string string">
+        /
+      </span>
+      <span class="token template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Prepend package name to relative paths
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
+        '../'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        ''
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Remove "parent directory" relative path segments
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
+        './'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        ''
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Remove "current directory" relative path segments
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token string-property property">
+        'src/'
+      </span>
+      <span class="token operator">
+        :
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        ''
+      </span>
+      <span class="token punctuation">
+        ,
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Remove "src directory" path segments
       </span>
       <span class>
       </span>
@@ -290,27 +262,7 @@ exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
         )
       </span>
       <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token comment">
-        // ...config settings
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        return
-      </span>
-      <span class>
-        config
-      </span>
-      <span class="token punctuation">
-        ;
+        ,
       </span>
       <span class>
       </span>
@@ -318,6 +270,9 @@ exports[`Configuration/Raw Imports Webpack Final Rules Config test 1`] = `
       </span>
       <span class="token punctuation">
         }
+      </span>
+      <span class="token punctuation">
+        )
       </span>
       <span class="token punctuation">
         ,
