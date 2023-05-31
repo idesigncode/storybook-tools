@@ -67,7 +67,7 @@ exports[`Components/Source Component With Props Raw Displayed Source test 1`] = 
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/Component.mjs'
+        '@idesigncode/storybook-tools/dist/Component.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -244,13 +244,6 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
-      <span class="token tag script language-javascript comment">
-        // The [value] will replace the [key] matched within an import path
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
       <span class="token tag script language-javascript string-property property">
         '^'
       </span>
@@ -350,7 +343,7 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript string">
-        ''
+        'dist/'
       </span>
       <span class="token tag script language-javascript punctuation">
         ,
@@ -358,7 +351,7 @@ exports[`Components/Source Component With Props Raw test 1`] = `
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript comment">
-        // Remove "src directory" path segments
+        // Replace "src/" with "dist/"
       </span>
       <span class="token tag script language-javascript">
       </span>

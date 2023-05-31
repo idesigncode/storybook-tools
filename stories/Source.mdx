@@ -32,10 +32,23 @@ The `Source` component can also display all [file import paths](https://develope
 
 Please see [Import Path Replacements](/docs/configuration-import-path-replacements--docs) for setting global (default) configuration of all instances of `Source`.
 
-Alternatively, you can override the global configuration by supplying a stringified "key-value pair" object for `importPathReplacements` directly:
+Alternatively, you can override the global configuration by supplying a stringified `{ key: value }` object for `importPathReplacements` directly:
 
-- `[key]` - a string to match within an import path (also accepts `^` to prepend relative paths).
-- `[value]` - a string to replace the matched `[key]` string.
+<table style={{ width: '100%' }}>
+  <tbody>
+    <tr>
+      <td>`key`</td>
+      <td>
+        A string to match within an import path. Also accepts `^` to prepend
+        relative paths.
+      </td>
+    </tr>
+    <tr>
+      <td>`value`</td>
+      <td>A string to replace the matched `key` string.</td>
+    </tr>
+  </tbody>
+</table>
 
 > #### Note:
 >
