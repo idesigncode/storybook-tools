@@ -9,7 +9,7 @@ export const Env = {
   args: {
     code: [
       `// .storybook/main.mjs`,
-      `import * as packageJson from '../package.json';`,
+      `import packageJson from '../package.json';`,
       ``,
       `export default {`,
       `  env: (config) => ({`,
