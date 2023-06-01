@@ -1,0 +1,12 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as UncompressedSourceCodeStories from './UncompressedSourceCode.stories.mjs';
+
+<Meta of={UncompressedSourceCodeStories} />
+
+# Uncompressed Source Code
+
+The default Webpack configuration for production builds may compress and remove comments from the example files source code.
+
+To prevent this from producing unwanted rendering in the `PropsTable`, add the following configuration to `./storybook/main.mjs`:
+
+<Story of={UncompressedSourceCodeStories.WebpackFinalRulesConfig} />

@@ -44,9 +44,15 @@ export default {
     });
   },
   webpackFinal: async (config) => {
+    // ? Ensure source code is not compressed and comments preserved
+    config.optimization.minimizer.map((minimizer) => {
+      minimizer.options.minimizer.options.format = { comments: true };
+      minimizer.options.minimizer.options.compress = false;
+      return minimizer;
+    });
+    // ? Ensure any loaders are not run on any 'raw' file imports
     config.module.rules.map((rule) => {
       if (!rule.type || rule.type !== 'asset/source') {
-        // ? Ensure any loaders are not run on any 'raw' file imports
         rule.resourceQuery = { not: [/raw/] };
       }
       return rule;
