@@ -273,6 +273,44 @@ exports[`Configuration/Webpack Implementation test 1`] = `
 </div>
 `;
 
+exports[`Configuration/Webpack Raw Import test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Stories of Component.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        ComponentWithPropsRaw
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        './ComponentWithProps.mjs?raw'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
 exports[`Configuration/Webpack Webpack Final Config test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
