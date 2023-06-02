@@ -1,0 +1,26 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import * as WebpackStories from './Webpack.stories.mjs';
+
+<Meta of={WebpackStories} />
+
+# Webpack
+
+Certain Webpack configuration settings are required for correct functionality of some components and features.
+
+These can be easily added to `.storybook/main.mjs` with the named export `webpackFinal`:
+
+<Story of={WebpackStories.Implementation} />
+
+You can alternatively use the imported `webpackFinal` async function with your own custom configuration settings:
+
+<Story of={WebpackStories.ImplementationCustomSettings} />
+
+The imported `webpackFinal` async function will set the following configurations:
+
+<Story of={WebpackStories.WebpackFinalConfig} />
+
+> #### See also:
+>
+> - [PropsTable](/docs/components-propstable--docs) - a component to automatically document static & "live-updating" props details.
+> - [Source](/docs/components-source--docs) - a component to display a block of source code.
+> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.

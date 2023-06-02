@@ -1,4 +1,5 @@
 import packageJson from '../package.json';
+import { webpackFinal } from '../src/storybookConfig.mjs';
 
 export default {
   addons: [
@@ -43,20 +44,5 @@ export default {
       return indexer;
     });
   },
-  webpackFinal: async (config) => {
-    // ? Ensure source code is not compressed and comments preserved
-    config.optimization.minimizer.map((minimizer) => {
-      minimizer.options.minimizer.options.format = { comments: true };
-      minimizer.options.minimizer.options.compress = false;
-      return minimizer;
-    });
-    // ? Ensure any loaders are not run on any 'raw' file imports
-    config.module.rules.map((rule) => {
-      if (!rule.type || rule.type !== 'asset/source') {
-        rule.resourceQuery = { not: [/raw/] };
-      }
-      return rule;
-    });
-    return config;
-  },
+  webpackFinal,
 };

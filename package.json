@@ -45,6 +45,7 @@
     "formatNodeToJsxString.mjs",
     "formatValueToString.mjs",
     "getValueType.mjs",
+    "storybookConfig.mjs",
     "styles.css"
   ],
   "exports": {
@@ -56,6 +57,7 @@
     "./formatValueToString.mjs": "./formatValueToString.mjs",
     "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
+    "./storybookConfig.mjs": "./storybookConfig.mjs",
     "./styles.css": "./styles.css"
   },
   "dependencies": {

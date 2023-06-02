@@ -26,4 +26,5 @@ storybook-static/
 /formatNodeToJsxString.mjs
 /formatValueToString.mjs
 /getValueType.mjs
+/storybookConfig.mjs
 /styles.css
