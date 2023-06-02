@@ -2,7 +2,7 @@ import React from 'react';
 import { expect, jest } from '@storybook/jest';
 import { userEvent, within } from '@storybook/testing-library';
 import { useDarkMode } from 'storybook-dark-mode';
-import * as packageJson from '../package.json';
+import packageJson from '../package.json';
 import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
 
@@ -80,7 +80,7 @@ export const ComponentWithPropsRaw = {
     code: [
       `// Stories of Component.mjs`,
       `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
-      `import * as packageJson from '../package.json';`,
+      `import packageJson from '../package.json';`,
       ``,
       `<Source`,
       `  code={ComponentWithPropsRaw}`,

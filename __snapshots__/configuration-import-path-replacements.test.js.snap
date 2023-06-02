@@ -17,16 +17,6 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
         import
       </span>
       <span class>
-      </span>
-      <span class="token operator">
-        *
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        as
-      </span>
-      <span class>
         packageJson
       </span>
       <span class="token keyword">

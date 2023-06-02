@@ -1,4 +1,5 @@
-import * as packageJson from '../package.json';
+import packageJson from '../package.json';
+import { webpackFinal } from '../src/storybookConfig.mjs';
 
 export default {
   addons: [
@@ -43,14 +44,5 @@ export default {
       return indexer;
     });
   },
-  webpackFinal: async (config) => {
-    config.module.rules.map((rule) => {
-      if (!rule.type || rule.type !== 'asset/source') {
-        // ? Ensure any loaders are not run on any 'raw' file imports
-        rule.resourceQuery = { not: [/raw/] };
-      }
-      return rule;
-    });
-    return config;
-  },
+  webpackFinal,
 };

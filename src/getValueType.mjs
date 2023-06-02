@@ -1,6 +1,6 @@
 /**
  * Get the type of value
- * @param value
+ * @param {*} value
  * @returns {string} "array"|"bigint"|"boolean"|"elementType"|"function"|"node"|"number"|"object"|"ref object"|"string"|"symbol"|"undefined"
  */
 const getValueType = (value) => {
