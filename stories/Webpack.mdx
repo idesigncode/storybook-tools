@@ -11,13 +11,24 @@ These can be easily added to `.storybook/main.mjs` with the named export `webpac
 
 <Story of={WebpackStories.Implementation} />
 
+  <details>
+    <summary>
+      <p>
+        <strong>Using `webpackFinal` with custom configuration settings</strong>
+      </p>
+    </summary>
+
 You can alternatively use the imported `webpackFinal` async function with your own custom configuration settings:
 
 <Story of={WebpackStories.ImplementationCustomSettings} />
 
+</details>
+
 The imported `webpackFinal` async function will set the following configurations:
 
 <Story of={WebpackStories.WebpackFinalConfig} />
+
+<br />
 
 ### Raw Imports
 
