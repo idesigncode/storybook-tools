@@ -82,6 +82,7 @@ body,
   /* Expandable section */
   details {
     summary {
+      cursor: pointer;
       margin-bottom: 1em;
 
       p {
