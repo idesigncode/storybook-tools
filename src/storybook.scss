@@ -104,6 +104,8 @@ body,
   /* Expandable section */
   details {
     &[open] {
+      margin-bottom: 3em;
+
       summary {
         margin-bottom: 1em;
       }
@@ -112,8 +114,14 @@ body,
     summary {
       cursor: pointer;
 
+      &::marker {
+        font-size: 1.5em;
+      }
+
       p {
         display: inline;
+        font-weight: bold;
+        text-decoration: underline;
       }
     }
   }
