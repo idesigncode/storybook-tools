@@ -7,10 +7,23 @@ import * as ImportPathReplacementsStories from './ImportPathReplacements.stories
 
 The [Source](/docs/components-source--docs) component can automatically display all [file import paths](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) as they would be used by a consumer of your code.
 
-By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified "key-value pair" object:
+By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified `{ key: value }` object:
 
-- `[key]` - a string to match within an import path (also accepts `^` to prepend relative paths).
-- `[value]` - a string to replace the matched `[key]` string.
+<table style={{ width: '100%' }}>
+  <tbody>
+    <tr>
+      <td>`key`</td>
+      <td>
+        A string to match within an import path. Also accepts `^` to prepend
+        relative paths.
+      </td>
+    </tr>
+    <tr>
+      <td>`value`</td>
+      <td>A string to replace the matched `key` string.</td>
+    </tr>
+  </tbody>
+</table>
 
 > #### Note:
 >
@@ -23,5 +36,4 @@ To use import path replacements globally, you can add the configuration to an `.
 
 > #### See also:
 >
-> - [Source](/docs/components-source--docs) - further information and examples of using import path replacements to display source code.
-> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.
+> - [Source](/docs/components-source--docs) - further information and examples of using import path replacements.

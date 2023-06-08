@@ -17,16 +17,6 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
         import
       </span>
       <span class>
-      </span>
-      <span class="token operator">
-        *
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        as
-      </span>
-      <span class>
         packageJson
       </span>
       <span class="token keyword">
@@ -135,13 +125,6 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       </span>
       <span class>
       </span>
-      <span class="token comment">
-        // The [value] will replace the [key] matched within an import path
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
       <span class="token string-property property">
         '^'
       </span>
@@ -241,7 +224,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        ''
+        'dist/'
       </span>
       <span class="token punctuation">
         ,
@@ -249,7 +232,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // Remove "src directory" path segments
+        // Replace "src/" with "dist/"
       </span>
       <span class>
       </span>
