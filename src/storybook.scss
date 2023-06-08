@@ -31,8 +31,20 @@ body,
 /* General */
 #storybook-root,
 #storybook-docs {
+  text-underline-offset: 0.4em;
+
+  /* Storybook elements */
   .sbdocs-wrapper {
     padding: 4rem 3rem;
+  }
+
+  .sb-story {
+    margin-bottom: 2rem;
+
+    &:last-child,
+    :last-child {
+      margin-bottom: 0;
+    }
   }
 
   /* Headings */
@@ -46,6 +58,11 @@ body,
       'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
       Helvetica, Arial, sans-serif;
     margin-bottom: 0.5em;
+    margin-top: 3rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     > a {
       display: none;
@@ -54,6 +71,7 @@ body,
 
   h1 {
     font-size: 3rem;
+    margin-top: 0;
   }
   h2 {
     font-size: 2.6rem;
@@ -76,16 +94,34 @@ body,
     background-color: var(--blockquote_background-color);
     border-left-color: var(--blockquote_border-left-color);
     padding: 1.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 
   /* Expandable section */
   details {
+    &[open] {
+      margin-bottom: 3em;
+
+      summary {
+        margin-bottom: 1em;
+      }
+    }
+
     summary {
-      margin-bottom: 1em;
+      cursor: pointer;
+
+      &::marker {
+        font-size: 1.5em;
+      }
 
       p {
         display: inline;
+        font-weight: bold;
+        text-decoration: underline;
       }
     }
   }
