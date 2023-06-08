@@ -28,21 +28,13 @@ const formatValueToString = (value, valueType) => {
   }
 
   if (valueType === 'function') {
-    const functionName = value.name ? '' : 'function _';
+    const functionName = value.name ? '' : 'function temporary';
     return prettier
-      .format(
-        // ? Remove injected referencers (e.g. "cov_25gqqjgt7h().f[4]++;")
-        // ? Occurs when imported components use function props in CSF stories
-        `${functionName}${value}`.replaceAll(
-          /\w*\(\)\.\w\[\d*]\+\+[;,]?\s*?/g,
-          ''
-        ),
-        {
-          parser: 'babel',
-          plugins: [prettierBabel],
-        }
-      )
-      .replace(functionName ? '^function _' : '', '');
+      .format(`${functionName}${value}`, {
+        parser: 'babel',
+        plugins: [prettierBabel],
+      })
+      .replace(functionName ? /^function temporary/ : '', '');
   }
 
   if (valueType === 'array' || valueType.includes('object')) {

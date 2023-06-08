@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "1.0.1",
+  "version": "2.1.0",
   "description": "A collection of tools & React components for use with Storybook.",
   "keywords": [
     "react",
@@ -23,7 +23,6 @@
   ],
   "scripts": {
     "eslint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
-    "postprepare": "node .npm-postprepare.cjs",
     "prepare": "npm run prepare:clean && npm run prepare:css && npm run prepare:js && husky install",
     "prepare:clean": "node .npm-prepare-clean.cjs",
     "prepare:css": "sass --no-source-map src/styles.scss:./styles.css && postcss *.css -d .",
@@ -46,6 +45,7 @@
     "formatNodeToJsxString.mjs",
     "formatValueToString.mjs",
     "getValueType.mjs",
+    "storybookConfig.mjs",
     "styles.css"
   ],
   "exports": {
@@ -57,11 +57,12 @@
     "./formatValueToString.mjs": "./formatValueToString.mjs",
     "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
+    "./storybookConfig.mjs": "./storybookConfig.mjs",
     "./styles.css": "./styles.css"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^7.0.10",
-    "@storybook/theming": "^7.0.10",
+    "@storybook/addon-docs": "^7.0.18",
+    "@storybook/theming": "^7.0.18",
     "babel-plugin-react-docgen": "^4.2.1",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
@@ -71,19 +72,19 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.21.5",
-    "@babel/core": "^7.21.8",
-    "@babel/preset-env": "^7.21.5",
-    "@babel/preset-react": "^7.18.6",
+    "@babel/core": "^7.22.1",
+    "@babel/preset-env": "^7.22.2",
+    "@babel/preset-react": "^7.22.3",
     "@storybook/addon-coverage": "^0.0.8",
-    "@storybook/addon-interactions": "^7.0.10",
-    "@storybook/addons": "^7.0.10",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addons": "^7.0.18",
     "@storybook/jest": "^0.1.0",
-    "@storybook/react": "^7.0.10",
-    "@storybook/react-webpack5": "^7.0.10",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-webpack5": "^7.0.18",
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
     "autoprefixer": "^10.4.14",
-    "babel-plugin-inline-react-svg": "^2.0.2",
+    "babel-plugin-istanbul": "^6.1.1",
     "cssnano": "^6.0.1",
     "eslint": "^8.40.0",
     "eslint-plugin-react": "^7.32.2",
@@ -91,12 +92,12 @@
     "husky": "^8.0.3",
     "jest-image-snapshot": "^6.1.0",
     "lint-staged": "^13.2.2",
-    "postcss": "^8.4.23",
+    "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.62.1",
-    "storybook": "^7.0.10"
+    "storybook": "^7.0.18"
   },
   "peerDependencies": {
     "react": "^18.0.0",

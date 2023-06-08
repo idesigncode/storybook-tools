@@ -42,14 +42,14 @@ exports[`Components/Source Code test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component Raw Displayed Source test 1`] = `
+exports[`Components/Source Component With Props Raw Displayed Source test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Source code displayed by &lt;Source code={ComponentRaw} /&gt;
+        // Source code displayed with "importPathReplacements" applied
       </span>
       <span class>
       </span>
@@ -59,7 +59,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
         import
       </span>
       <span class>
-        Replace
+        Component
       </span>
       <span class="token keyword">
         from
@@ -67,7 +67,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/Replace.mjs'
+        '@idesigncode/storybook-tools/dist/Component.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -88,7 +88,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './../Preserve.mjs'
+        '../src/Preserve.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -109,7 +109,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './../Replace.mjs'
+        '../src/notAnImport.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -122,7 +122,7 @@ exports[`Components/Source Component Raw Displayed Source test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component Raw test 1`] = `
+exports[`Components/Source Component With Props Raw test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
@@ -139,7 +139,7 @@ exports[`Components/Source Component Raw test 1`] = `
         import
       </span>
       <span class>
-        ComponentRaw
+        ComponentWithPropsRaw
       </span>
       <span class="token keyword">
         from
@@ -147,7 +147,28 @@ exports[`Components/Source Component Raw test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './Component.mjs?raw'
+        './ComponentWithProps.mjs?raw'
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+        packageJson
+      </span>
+      <span class="token keyword">
+        from
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        '../package.json'
       </span>
       <span class="token punctuation">
         ;
@@ -164,6 +185,8 @@ exports[`Components/Source Component Raw test 1`] = `
       </span>
       <span class="token tag">
       </span>
+      <span class="token tag">
+      </span>
       <span class="token tag attr-name">
         code
       </span>
@@ -174,10 +197,166 @@ exports[`Components/Source Component Raw test 1`] = `
         {
       </span>
       <span class="token tag script language-javascript">
-        ComponentRaw
+        ComponentWithPropsRaw
       </span>
       <span class="token tag script language-javascript punctuation">
         }
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag">
+      </span>
+      <span class="token tag attr-name">
+        importPathReplacements
+      </span>
+      <span class="token tag script language-javascript script-punctuation punctuation">
+        =
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript constant">
+        JSON
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        .
+      </span>
+      <span class="token tag script language-javascript function">
+        stringify
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        (
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        {
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        '^'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        \${
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        packageJson
+      </span>
+      <span class="token tag script language-javascript template-string interpolation punctuation">
+        .
+      </span>
+      <span class="token tag script language-javascript template-string interpolation">
+        name
+      </span>
+      <span class="token tag script language-javascript template-string interpolation interpolation-punctuation punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript template-string string">
+        /
+      </span>
+      <span class="token tag script language-javascript template-string template-punctuation string">
+        \`
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Prepend package name to relative paths
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        '../'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        ''
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Remove "parent directory" relative path segments
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        './'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        ''
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Remove "current directory" relative path segments
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string-property property">
+        'src/'
+      </span>
+      <span class="token tag script language-javascript operator">
+        :
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript string">
+        'dist/'
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript comment">
+        // Replace "src/" with "dist/"
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript">
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        )
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        }
+      </span>
+      <span class="token tag">
       </span>
       <span class="token tag">
       </span>
@@ -192,14 +371,14 @@ exports[`Components/Source Component Raw test 1`] = `
 </div>
 `;
 
-exports[`Components/Source Component test 1`] = `
+exports[`Components/Source Component With Props test 1`] = `
 <div class="Source sb-unstyled ">
   <pre class="prismjs">
     <code class="language-jsx"
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Component.mjs
+        // ComponentWithProps.mjs (the "example component")
       </span>
       <span class>
       </span>
@@ -209,7 +388,7 @@ exports[`Components/Source Component test 1`] = `
         import
       </span>
       <span class>
-        Replace
+        Component
       </span>
       <span class="token keyword">
         from
@@ -217,7 +396,7 @@ exports[`Components/Source Component test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './../Replace.mjs'
+        '../src/Component.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -238,7 +417,7 @@ exports[`Components/Source Component test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './../Preserve.mjs'
+        '../src/Preserve.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -264,7 +443,7 @@ exports[`Components/Source Component test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './../Replace.mjs'
+        '../src/notAnImport.mjs'
       </span>
       <span class="token punctuation">
         ;
@@ -327,39 +506,6 @@ exports[`Components/Source Dark test 1`] = `
       </span>
       <span class="token tag punctuation">
         /&gt;
-      </span>
-    </code>
-  </pre>
-  <button>
-    Copy
-  </button>
-</div>
-`;
-
-exports[`Components/Source Env test 1`] = `
-<div class="Source sb-unstyled ">
-  <pre class="prismjs">
-    <code class="language-jsx"
-          style="white-space: pre;"
-    >
-      <span class="token comment">
-        // .env
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token constant">
-        PACKAGE_NAME
-      </span>
-      <span class="token operator">
-        =
-      </span>
-      <span class>
-        $npm_package_name
-      </span>
-      <span class="token comment">
-        // Uses 'name' from package.json
       </span>
     </code>
   </pre>
@@ -449,7 +595,7 @@ exports[`Components/Source Props test 1`] = `
       </tr>
       <tr>
         <td>
-          importPathReplacer
+          importPathReplacements
         </td>
         <td>
           <code>
@@ -475,7 +621,7 @@ exports[`Components/Source Props test 1`] = `
                   .
                 </span>
                 <span class="token constant">
-                  PACKAGE_NAME
+                  IMPORT_PATH_REPLACEMENTS
                 </span>
               </code>
             </pre>
