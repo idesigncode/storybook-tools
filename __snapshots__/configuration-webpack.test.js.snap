@@ -290,7 +290,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
         import
       </span>
       <span class>
-        ComponentWithPropsRaw
+        ComponentExampleRaw
       </span>
       <span class="token keyword">
         from
@@ -298,7 +298,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './ComponentWithProps.mjs?raw'
+        './Component.example.mjs?raw'
       </span>
       <span class="token punctuation">
         ;
