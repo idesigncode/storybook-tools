@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "description": "A collection of tools & React components for use with Storybook.",
   "keywords": [
     "react",
@@ -45,6 +45,7 @@
     "formatNodeToJsxString.mjs",
     "formatValueToString.mjs",
     "getValueType.mjs",
+    "storybookConfig.mjs",
     "styles.css"
   ],
   "exports": {
@@ -56,11 +57,12 @@
     "./formatValueToString.mjs": "./formatValueToString.mjs",
     "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
+    "./storybookConfig.mjs": "./storybookConfig.mjs",
     "./styles.css": "./styles.css"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^7.0.18",
-    "@storybook/theming": "^7.0.18",
+    "@storybook/addon-docs": "^7.0.20",
+    "@storybook/theming": "^7.0.20",
     "babel-plugin-react-docgen": "^4.2.1",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
@@ -74,17 +76,17 @@
     "@babel/preset-env": "^7.22.2",
     "@babel/preset-react": "^7.22.3",
     "@storybook/addon-coverage": "^0.0.8",
-    "@storybook/addon-interactions": "^7.0.18",
-    "@storybook/addons": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addons": "^7.0.20",
     "@storybook/jest": "^0.1.0",
-    "@storybook/react": "^7.0.18",
-    "@storybook/react-webpack5": "^7.0.18",
+    "@storybook/react": "^7.0.20",
+    "@storybook/react-webpack5": "^7.0.20",
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
     "autoprefixer": "^10.4.14",
     "babel-plugin-istanbul": "^6.1.1",
     "cssnano": "^6.0.1",
-    "eslint": "^8.40.0",
+    "eslint": "^8.42.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
@@ -94,8 +96,8 @@
     "postcss-cli": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.62.1",
-    "storybook": "^7.0.18"
+    "sass": "^1.63.2",
+    "storybook": "^7.0.20"
   },
   "peerDependencies": {
     "react": "^18.0.0",

@@ -7,6 +7,8 @@ import * as PropsTableStories from './PropsTable.stories.mjs';
 
 Adds a table of props details automatically generated from the props given to a single child component.
 
+Can be used within [stories](https://storybook.js.org/docs/react/writing-stories/introduction) or directly in [MDX pages](https://storybook.js.org/docs/react/writing-docs/mdx).
+
 <Story of={PropsTableStories.Props} />
 
 > #### Note:
@@ -36,7 +38,7 @@ The prop `values` displayed in the `PropsTable` will update if the child compone
 >
 > #### See also:
 >
-> - [Raw Imports](/docs/configuration-raw-imports--docs) - get the source code of an imported file.
+> - [Raw Imports](/docs/configuration-webpack--docs#raw-imports) - get the source code of an imported file.
 
 Use the boolean `hideChildren` to only show the `PropsTable` and disable rendering of the "example component".
 
