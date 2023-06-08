@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/addon-docs';
+import ImportPathReplacementsObject from './ImportPathReplacementsObject.mjs';
 import * as SourceStories from './Source.stories.mjs';
 
 <Meta of={SourceStories} />
@@ -34,28 +35,9 @@ The `Source` component can automatically display all [file import paths](https:/
 
 Please see [Import Path Replacements](/docs/configuration-import-path-replacements--docs) for setting global (default) configuration of all instances of `Source`.
 
-Alternatively, you can override the global configuration by supplying a stringified `{ key: value }` object for `importPathReplacements` directly:
+Alternatively, you can override the global configuration by supplying a stringified `{ key: value }` object for `importPathReplacements` directly.
 
-<table style={{ width: '100%' }}>
-  <tbody>
-    <tr>
-      <td>`key`</td>
-      <td>
-        A string to match within an import path. Also accepts `^` to prepend
-        relative paths.
-      </td>
-    </tr>
-    <tr>
-      <td>`value`</td>
-      <td>A string to replace the matched `key` string.</td>
-    </tr>
-  </tbody>
-</table>
-
-> #### Note:
->
-> - Import path replacements are performed in the order specified.
-> - Matches may occur more than once within an import path.
+<ImportPathReplacementsObject />
 
 For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
@@ -69,6 +51,8 @@ You can also disable import path replacements on each instance of `Source` by se
 
 > #### Note:
 >
+> - Import path replacements are performed in the order specified.
+> - Matches may occur more than once within an import path.
 > - Any use of the `// preserve-path` will be removed from the displayed source code of each `Source` that uses import path replacements.
 >
 > #### See also:
