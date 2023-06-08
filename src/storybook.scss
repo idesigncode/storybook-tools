@@ -31,6 +31,8 @@ body,
 /* General */
 #storybook-root,
 #storybook-docs {
+  text-underline-offset: 0.4em;
+
   /* Storybook elements */
   .sbdocs-wrapper {
     padding: 4rem 3rem;
