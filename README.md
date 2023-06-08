@@ -9,7 +9,7 @@ Check out the [documentation](https://idesigncode-storybook-tools.netlify.app/) 
 ## Installation
 
 ```shell
-npm i @idesigncode/storybook-tools --save
+npm i @idesigncode/storybook-tools --save-dev
 ```
 
 ## Features
