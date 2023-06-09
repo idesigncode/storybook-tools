@@ -373,7 +373,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Enable 'raw imports' for all files
+        // Enable 'raw imports' for all files
       </span>
       <span class>
       </span>
@@ -562,7 +562,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Enable unminified display of props in production
+        // Enable unminified display of props in production
       </span>
       <span class>
       </span>
