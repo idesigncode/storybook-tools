@@ -78,7 +78,7 @@ export const ComponentExample = {
 export const ComponentExampleRaw = {
   args: {
     code: [
-      `// Stories of Component.mjs`,
+      `// Component.stories.mjs`,
       `import ComponentExampleRaw from './Component.example.mjs?raw';`,
       `import packageJson from '../package.json';`,
       ``,

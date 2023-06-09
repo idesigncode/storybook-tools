@@ -74,7 +74,7 @@ export const RawImport = {
   render: () => (
     <Source
       code={[
-        `// Stories of Input.mjs`,
+        `// Input.stories.mjs`,
         `import InputExampleRaw from './Input.example.mjs?raw';`,
         ``,
         `<Source code={InputExampleRaw} />`,

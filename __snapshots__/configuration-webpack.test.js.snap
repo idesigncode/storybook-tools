@@ -280,7 +280,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>

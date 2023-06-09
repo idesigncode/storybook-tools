@@ -34,7 +34,7 @@ export const AutomaticTypeSource = {
     return (
       <Source
         code={[
-          `// Stories of Component.mjs`,
+          `// Component.stories.mjs`,
           `import DefaultValue from '@idesigncode/storybook-tools/DefaultValue.mjs';`,
           ``,
           formatNodeToJsxString(<DefaultValue {...args} />),
