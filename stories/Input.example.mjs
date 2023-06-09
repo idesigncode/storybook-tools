@@ -2,7 +2,7 @@ import React from 'react';
 import PropsTable from '../src/PropsTable.mjs';
 import Input from './Input.mjs'; // preserve-path
 
-const InputWithProps = (props) => {
+const InputExample = (props) => {
   const [value, setValue] = React.useState('');
 
   return (
@@ -17,4 +17,4 @@ const InputWithProps = (props) => {
   );
 };
 
-export default InputWithProps;
+export default InputExample;

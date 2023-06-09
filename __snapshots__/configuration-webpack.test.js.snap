@@ -280,7 +280,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -290,7 +290,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
         import
       </span>
       <span class>
-        ComponentWithPropsRaw
+        ComponentExampleRaw
       </span>
       <span class="token keyword">
         from
@@ -298,7 +298,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './ComponentWithProps.mjs?raw'
+        './Component.example.mjs?raw'
       </span>
       <span class="token punctuation">
         ;
@@ -562,7 +562,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Enable correct display of dynamic source code in production
+        // ? Enable unminified display of props in production
       </span>
       <span class>
       </span>
