@@ -562,7 +562,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Enable correct display of dynamic source code in production
+        // ? Enable unminified display of props in production
       </span>
       <span class>
       </span>

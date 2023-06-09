@@ -31,7 +31,7 @@ export default {
     name: '@storybook/react-webpack5',
     options: {},
   },
-  stories: ['../**/*.mdx', '../**/*.stories.*'],
+  stories: ['../**/Introduction.mdx', '../**/*.mdx', '../**/*.stories.*'],
   storyIndexers: (indexers) => {
     // ? Extend js story indexer for mjs
     return indexers.map((indexer) => {
