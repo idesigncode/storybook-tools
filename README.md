@@ -1,6 +1,6 @@
 # @idesigncode/storybook-tools
 
-A collection of tools & React components for use with Storybook.
+A collection of ESM tools to document component implementation examples in Storybook.
 
 ## Documentation [![Storybook](https://cdn.jsdelivr.net/gh/storybookjs/brand@main/badge/badge-storybook.svg)](https://idesigncode-storybook-tools.netlify.app)
 

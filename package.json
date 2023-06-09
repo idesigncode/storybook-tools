@@ -1,7 +1,7 @@
 {
   "name": "@idesigncode/storybook-tools",
   "version": "2.1.0",
-  "description": "A collection of tools & React components for use with Storybook.",
+  "description": "A collection of ESM tools to document component implementation examples in Storybook.",
   "keywords": [
     "react",
     "css",
