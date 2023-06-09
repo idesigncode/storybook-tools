@@ -24,7 +24,7 @@ Using a separate file for each implementation "example component" allows us to:
 - Add state functionality (as you would in a real implementation).
 - Define a variety of prop combinations.
 - Import the functional example as the rendered component of a story.
-- Import the file as raw source code (with a little [Webpack](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-webpack--docs) configuration).
+- Import the file as raw source code (with some [Webpack](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-webpack--docs) configuration).
 
 Of course the file names and locations are just a suggestion - they are not required.
 
@@ -32,17 +32,17 @@ Of course the file names and locations are just a suggestion - they are not requ
 
 All components are designed to be used within [stories](https://storybook.js.org/docs/react/writing-stories/introduction) or directly in [Docs pages](https://storybook.js.org/docs/react/writing-docs/mdx).
 
-- [DefaultValue](/docs/components-propstable--docs) - a simple table detailing a single prop's default value.
-- [PropsTable](/docs/components-propstable--docs) - a component to automatically document static & "live-updating" props details.
-- [Source](/docs/components-source--docs) - a component to display a block of source code.
+- [DefaultValue](/docs/components-propstable--docs) - a table detailing a single prop's default value.
+- [PropsTable](/docs/components-propstable--docs) - automatically document static & "live-updating" props details.
+- [Source](/docs/components-source--docs) - display a block of source code.
 
 These components are also compatible with [User Interaction](https://storybook.js.org/docs/react/writing-tests/interaction-testing), [DOM](https://jestjs.io/docs/snapshot-testing) & [Image](https://github.com/americanexpress/jest-image-snapshot) Snapshot tests.
 
 ## Configuration
 
-The components do require importing the [default CSS styles](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-css--docs). This CSS also applies some styles that override some of Storybook's default styling.
+The default themes and component styles can be imported with the [default CSS styles](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-css--docs).
 
-If you wish to use Docs pages, you might also want to enable the light & dark mode theme functionality with the [DocsContainer](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-docscontainer--docs).
+If are using Docs pages, you might also want to enable the light & dark mode theme functionality with the [DocsContainer](https://idesigncode-storybook-tools.netlify.app/?path=/docs/configuration-docscontainer--docs).
 
 Optionally, some further configuration is required for some of the more advanced functionality:
 
