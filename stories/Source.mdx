@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/addon-docs';
+import ImportPathReplacementsObject from './ImportPathReplacementsObject.mjs';
 import * as SourceStories from './Source.stories.mjs';
 
 <Meta of={SourceStories} />
@@ -8,8 +9,6 @@ import * as SourceStories from './Source.stories.mjs';
 Adds a block of source code with "copy" functionality to the page.
 
 Similar to [Storybook's Source block](https://storybook.js.org/docs/react/api/doc-block-source) but with code replacement functionality for production-ready source code and image snapshot testing compatibility.
-
-Can be used within [stories](https://storybook.js.org/docs/react/writing-stories/introduction) or directly in [MDX pages](https://storybook.js.org/docs/react/writing-docs/mdx).
 
 <Story of={SourceStories.Props} />
 
@@ -28,49 +27,30 @@ The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](
 > - As `Source` is designed to show production-ready source code, it will automatically remove any use of [PropsTable](/docs/components-propstable--docs).
 > - This can be disabled by setting `removePropsTable` to `false`.
 
-<br />
-
 ### Import Path Replacements (optional):
 
 The `Source` component can automatically display all [file import paths](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) as they would be used by a consumer of your code.
 
 Please see [Import Path Replacements](/docs/configuration-import-path-replacements--docs) for setting global (default) configuration of all instances of `Source`.
 
-Alternatively, you can override the global configuration by supplying a stringified `{ key: value }` object for `importPathReplacements` directly:
+Alternatively, you can override the global configuration by supplying a stringified `{ key: value }` object for `importPathReplacements` directly.
 
-<table style={{ width: '100%' }}>
-  <tbody>
-    <tr>
-      <td>`key`</td>
-      <td>
-        A string to match within an import path. Also accepts `^` to prepend
-        relative paths.
-      </td>
-    </tr>
-    <tr>
-      <td>`value`</td>
-      <td>A string to replace the matched `key` string.</td>
-    </tr>
-  </tbody>
-</table>
-
-> #### Note:
->
-> - Import path replacements are performed in the order specified.
-> - Matches may occur more than once within an import path.
+<ImportPathReplacementsObject />
 
 For further control, you can also use the inline comment `// preserve-path` to opt-out of the import path replacement:
 
-<Story of={SourceStories.ComponentWithProps} />
+<Story of={SourceStories.ComponentExample} />
 
-<Story of={SourceStories.ComponentWithPropsRaw} />
+<Story of={SourceStories.ComponentExampleRaw} />
 
-<Story of={SourceStories.ComponentWithPropsRawDisplayedSource} />
+<Story of={SourceStories.ComponentExampleRawDisplayedSource} />
 
 You can also disable import path replacements on each instance of `Source` by setting `importPathReplacements` to `false`.
 
 > #### Note:
 >
+> - Import path replacements are performed in the order specified.
+> - Matches may occur more than once within an import path.
 > - Any use of the `// preserve-path` will be removed from the displayed source code of each `Source` that uses import path replacements.
 >
 > #### See also:

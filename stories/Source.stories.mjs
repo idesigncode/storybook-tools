@@ -65,25 +65,25 @@ const componentWithProps = [
   `const notAnImport = '../src/notAnImport.mjs';`,
 ];
 
-export const ComponentWithProps = {
+export const ComponentExample = {
   args: {
     code: [
-      `// ComponentWithProps.mjs (the "example component")`,
+      `// Component.example.mjs (the "example component")`,
       ...componentWithProps,
     ].join('\n'),
     importPathReplacements: false,
   },
 };
 
-export const ComponentWithPropsRaw = {
+export const ComponentExampleRaw = {
   args: {
     code: [
-      `// Stories of Component.mjs`,
-      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
+      `// Component.stories.mjs`,
+      `import ComponentExampleRaw from './Component.example.mjs?raw';`,
       `import packageJson from '../package.json';`,
       ``,
       `<Source`,
-      `  code={ComponentWithPropsRaw}`,
+      `  code={ComponentExampleRaw}`,
       `  importPathReplacements={JSON.stringify({`,
       `    '^': \`\${packageJson.name}/\`, // Prepend package name to relative paths`,
       `    '../': '', // Remove "parent directory" relative path segments`,
@@ -96,7 +96,7 @@ export const ComponentWithPropsRaw = {
   },
 };
 
-export const ComponentWithPropsRawDisplayedSource = {
+export const ComponentExampleRawDisplayedSource = {
   args: {
     code: [
       `// Source code displayed with "importPathReplacements" applied`,

@@ -12,7 +12,7 @@ export const webpackFinal = async (config) => {
     return rule;
   });
 
-  // ? Enable correct display of dynamic source code in production
+  // ? Enable unminified display of props in production
   config.optimization.minimizer.map((minimizer) => {
     minimizer.options.minimizer.options.compress = false;
     minimizer.options.minimizer.options.format = { comments: true };

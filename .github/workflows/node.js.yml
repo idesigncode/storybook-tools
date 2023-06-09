@@ -24,3 +24,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install-test
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

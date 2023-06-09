@@ -106,8 +106,8 @@ export const WebpackFinal = {
 export const RawImport = {
   args: {
     code: [
-      `// Stories of Component.mjs`,
-      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
+      `// Component.stories.mjs`,
+      `import ComponentExampleRaw from './Component.example.mjs?raw';`,
     ].join('\n'),
     importPathReplacements: false,
   },

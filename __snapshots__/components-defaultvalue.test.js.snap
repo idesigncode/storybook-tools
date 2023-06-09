@@ -7,7 +7,7 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -112,7 +112,7 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -346,7 +346,7 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>

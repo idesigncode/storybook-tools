@@ -1,4 +1,5 @@
 import { Meta, Story } from '@storybook/addon-docs';
+import ImportPathReplacementsObject from './ImportPathReplacementsObject.mjs';
 import * as ImportPathReplacementsStories from './ImportPathReplacements.stories.mjs';
 
 <Meta of={ImportPathReplacementsStories} />
@@ -9,31 +10,17 @@ The [Source](/docs/components-source--docs) component can automatically display 
 
 By default, this functionality is disabled unless `process.env.IMPORT_PATH_REPLACEMENTS` has a value - a stringified `{ key: value }` object:
 
-<table style={{ width: '100%' }}>
-  <tbody>
-    <tr>
-      <td>`key`</td>
-      <td>
-        A string to match within an import path. Also accepts `^` to prepend
-        relative paths.
-      </td>
-    </tr>
-    <tr>
-      <td>`value`</td>
-      <td>A string to replace the matched `key` string.</td>
-    </tr>
-  </tbody>
-</table>
-
-> #### Note:
->
-> - Import path replacements are performed in the order specified.
-> - Matches may occur more than once within an import path.
+<ImportPathReplacementsObject />
 
 To use import path replacements globally, you can add the configuration to an `.env` file or with [Storybook environment variables](https://storybook.js.org/docs/react/configure/environment-variables#using-storybook-configuration):
 
 <Story of={ImportPathReplacementsStories.Env} />
 
+> #### Note:
+>
+> - Import path replacements are performed in the order specified.
+> - Matches may occur more than once within an import path.
+>
 > #### See also:
 >
 > - [Source](/docs/components-source--docs) - further information and examples of using import path replacements.
