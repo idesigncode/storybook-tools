@@ -84,7 +84,6 @@
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
     "autoprefixer": "^10.4.14",
-    "babel-plugin-istanbul": "^6.1.1",
     "cssnano": "^6.0.1",
     "eslint": "^8.42.0",
     "eslint-plugin-react": "^7.32.2",
