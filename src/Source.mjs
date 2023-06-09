@@ -25,15 +25,15 @@ const Source = ({
 
   if (removePropsTable && codeString.includes('PropsTable')) {
     codeString = codeString
-      // ? Replace the PropsTable import from the displayed source code
+      // Replace the PropsTable import from the displayed source code
       .replace(/import PropsTable.*\s*/gm, '')
-      // ? Replace "<PropsTable ... />" from the displayed source code leaving just the child component
+      // Replace "<PropsTable ... />" from the displayed source code leaving just the child component
       .replace(
         /<PropsTable((\s*(props={\s*?{[^]*?}\s*?}|hideChildren(={(true|false)})?))*\s*?)?\s*?>([^]*)<\/PropsTable>/g,
         '$6'
       );
 
-    // ? Format with correct indentation
+    // Format with correct indentation
     codeString = prettier.format(codeString, {
       parser: 'babel',
       plugins: [prettierBabel],
@@ -51,33 +51,33 @@ const Source = ({
     codeString = codeString
       .split('\n')
       .map((line) => {
-        // ? If line is an import declaration without "preserve-path" comment
+        // If line is an import declaration without "preserve-path" comment
         if (
           line.startsWith('import ') &&
           !line.trim().includes(preserveComment)
         ) {
-          // ? Get import path from line
+          // Get import path from line
           const [, importPath] = line.split(/['"]/g);
 
-          // ? Perform import paths replacements to create a new path string
+          // Perform import paths replacements to create a new path string
           let exportPath = importPath;
           Object.keys(importPathReplacementsObject).map((key) => {
             exportPath =
               key === '^' && exportPath.startsWith('.')
-                ? // ? Prepend relative paths with value
+                ? // Prepend relative paths with value
                   `${importPathReplacementsObject[key]}${exportPath}`
-                : // ? Replace key in path with value
+                : // Replace key in path with value
                   exportPath.replaceAll(key, importPathReplacementsObject[key]);
           });
 
-          // ? Replace existing import path with new path string
+          // Replace existing import path with new path string
           return line.replace(importPath, exportPath);
         }
         return line;
       })
       .join('\n');
 
-    // ? Remove "preserve-path" comments
+    // Remove "preserve-path" comments
     if (codeString.includes(preserveComment)) {
       codeString = codeString.replaceAll(preserveComment, '');
     }
