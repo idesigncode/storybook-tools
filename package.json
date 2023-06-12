@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "A collection of ESM tools to document component implementation examples in Storybook.",
   "keywords": [
     "react",
