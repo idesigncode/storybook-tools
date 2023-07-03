@@ -66,5 +66,8 @@ export const SeparateImportVars = {
     ]
       // Rejoin as multiline string
       .join('\n'),
+    style: {
+      '--code-highlight-tag-keyword-attr-value_color': 'unset',
+    },
   },
 };
