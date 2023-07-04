@@ -19,12 +19,17 @@ __snapshots__/failed/
 
 # Build files
 storybook-static/
+/DefaultValue.css
 /DefaultValue.mjs
 /DocsContainer.mjs
+/PropsTable.css
 /PropsTable.mjs
+/Source.css
 /Source.mjs
 /formatNodeToJsxString.mjs
 /formatValueToString.mjs
 /getValueType.mjs
+/storybook.css
 /storybookConfig.mjs
 /styles.css
+/themes.css
