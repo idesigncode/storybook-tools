@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "description": "A collection of ESM tools to document component implementation examples in Storybook.",
   "keywords": [
     "react",
@@ -25,7 +25,7 @@
     "eslint": "eslint . --ext .js,.cjs,.mjs --fix --ignore-path .gitignore",
     "prepare": "npm run prepare:clean && npm run prepare:css && npm run prepare:js && husky install",
     "prepare:clean": "node .npm-prepare-clean.cjs",
-    "prepare:css": "sass --no-source-map src/styles.scss:./styles.css && postcss *.css -d .",
+    "prepare:css": "sass --no-source-map src:. && postcss *.css -d .",
     "prepare:js": "babel src --out-dir . --ignore **/*.test.mjs,**/*.stories.mjs --keep-file-extension",
     "prepublishOnly": "npm run test",
     "prettier": "prettier --write . --ignore-path .gitignore",
@@ -39,27 +39,36 @@
     "test:storybook:update": "npm run test:storybook -- --updateSnapshot"
   },
   "files": [
+    "DefaultValue.css",
     "DefaultValue.mjs",
     "DocsContainer.mjs",
+    "PropsTable.css",
     "PropsTable.mjs",
+    "Source.css",
     "Source.mjs",
     "formatNodeToJsxString.mjs",
     "formatValueToString.mjs",
     "getValueType.mjs",
     "storybookConfig.mjs",
-    "styles.css"
+    "styles.css",
+    "themes.css"
   ],
   "exports": {
+    "./DefaultValue.css": "./DefaultValue.css",
     "./DefaultValue.mjs": "./DefaultValue.mjs",
     "./DocsContainer.mjs": "./DocsContainer.mjs",
+    "./PropsTable.css": "./PropsTable.css",
     "./PropsTable.mjs": "./PropsTable.mjs",
+    "./Source.css": "./Source.css",
     "./Source.mjs": "./Source.mjs",
     "./formatNodeToJsxString.mjs": "./formatNodeToJsxString.mjs",
     "./formatValueToString.mjs": "./formatValueToString.mjs",
     "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
+    "./storybook.css": "./storybook.css",
     "./storybookConfig.mjs": "./storybookConfig.mjs",
-    "./styles.css": "./styles.css"
+    "./styles.css": "./styles.css",
+    "./themes.css": "./themes.css"
   },
   "dependencies": {
     "@storybook/addon-docs": "^7.0.20",

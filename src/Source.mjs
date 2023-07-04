@@ -17,6 +17,7 @@ const Source = ({
   dark = null,
   importPathReplacements = process.env.IMPORT_PATH_REPLACEMENTS,
   removePropsTable = true,
+  style,
 }) => {
   const isDarkMode = useDarkMode();
   const isDark = dark !== null ? dark : isDarkMode;
@@ -84,7 +85,7 @@ const Source = ({
   }
 
   return (
-    <div className={`Source sb-unstyled ${isDark ? 'dark' : ''}`}>
+    <div className={`Source sb-unstyled ${isDark ? 'dark' : ''}`} style={style}>
       <SyntaxHighlighter language="jsx" useInlineStyles={false}>
         {codeString}
       </SyntaxHighlighter>
@@ -103,6 +104,7 @@ Source.propTypes = {
     PropTypes.bool,
   ]),
   removePropsTable: PropTypes.bool,
+  style: PropTypes.object,
 };
 
 export default Source;
