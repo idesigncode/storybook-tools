@@ -4,7 +4,7 @@
  * @returns {Promise<*>}
  */
 export const webpackFinal = async (config) => {
-  // ? Enable 'raw imports' for all files
+  // Enable 'raw imports' for all files
   config.module.rules.map((rule) => {
     if (!rule.type || rule.type !== 'asset/source') {
       rule.resourceQuery = { not: [/raw/] };
@@ -12,7 +12,7 @@ export const webpackFinal = async (config) => {
     return rule;
   });
 
-  // ? Enable unminified display of props in production
+  // Enable unminified display of props in production
   config.optimization.minimizer.map((minimizer) => {
     minimizer.options.minimizer.options.compress = false;
     minimizer.options.minimizer.options.format = { comments: true };

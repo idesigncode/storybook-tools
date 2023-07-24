@@ -52,7 +52,7 @@ const formatValueToString = (value, valueType) => {
       return formatValueToString(data, dataType);
     };
 
-    // ? Allow for valueType overrides
+    // Allow for valueType overrides
     let valueData = valueType === 'array' ? `[${value}]` : `{${value}}`;
     if (valueType === getValueType(value)) {
       valueData = stringifyJSON(value);
@@ -64,7 +64,7 @@ const formatValueToString = (value, valueType) => {
           parser: 'babel',
           plugins: [prettierBabel],
         })
-        // ? Remove temporary const declaration
+        // Remove temporary const declaration
         .replace(/^const temporary = ([^]*);$/gm, '$1')
     );
   }
