@@ -74,7 +74,7 @@
     "@storybook/addon-docs": "^7.1.1",
     "@storybook/theming": "^7.1.1",
     "babel-plugin-react-docgen": "^4.2.1",
-    "prettier": "^2.8.8",
+    "prettier": "^3.0.0",
     "prop-types": "^15.8.1",
     "react-element-to-jsx-string": "^15.0.0",
     "react-syntax-highlighter": "^15.5.0",
