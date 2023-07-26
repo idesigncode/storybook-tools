@@ -86,7 +86,7 @@ export const RawImport = {
 
 const InputExampleRawWithoutPropsComments = InputExampleRawWithoutProps.replace(
   /(<Input\s*)([^]*)(onChange)/g,
-  '$1$3'
+  '$1$3',
 );
 
 export const RawImportDisplayedSource = {
@@ -123,7 +123,7 @@ export const ManualTypeWithRequiredSource = {
   render: () => {
     const props = formatValueToString(
       ManualTypeWithRequired.args.props,
-      'object'
+      'object',
     );
     return (
       <Source
@@ -132,13 +132,13 @@ export const ManualTypeWithRequiredSource = {
             `// Input.example.mjs (the "example component")`,
             InputExampleRawWithoutPropsComments.replace(
               '<PropsTable>',
-              `<PropsTable hideChildren={true} props={${props}}>`
+              `<PropsTable hideChildren={true} props={${props}}>`,
             ),
           ].join('\n'),
           {
             parser: 'babel',
             plugins: [prettierBabel],
-          }
+          },
         )}
         removePropsTable={false}
       />

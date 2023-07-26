@@ -50,8 +50,8 @@ const getCSSVarsArray = (string) => {
           return cssVarDeclaration;
         })
         // Sort alphabetically
-        .sort()
-    )
+        .sort(),
+    ),
   );
 };
 

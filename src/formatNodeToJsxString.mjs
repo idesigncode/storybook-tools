@@ -14,7 +14,7 @@ const formatNodeToJsxString = (node) => {
     {
       functionValue: (fn) => fn.displayName || fn.name,
       showFunctions: true,
-    }
+    },
   )
     // TODO - Remove once resolved: https://github.com/algolia/react-element-to-jsx-string/issues/613
     .replace(/(as={{)[^]*?(}})/gm, () => {

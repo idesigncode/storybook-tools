@@ -100,7 +100,7 @@ PropsTable.propTypes = {
       required: PropTypes.bool,
       type: PropTypes.string,
       value: PropTypes.any,
-    })
+    }),
   ),
 };
 

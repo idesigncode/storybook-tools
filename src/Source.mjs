@@ -31,7 +31,7 @@ const Source = ({
       // Replace "<PropsTable ... />" from the displayed source code leaving just the child component
       .replace(
         /<PropsTable((\s*(props={\s*?{[^]*?}\s*?}|hideChildren(={(true|false)})?))*\s*?)?\s*?>([^]*)<\/PropsTable>/g,
-        '$6'
+        '$6',
       );
 
     // Format with correct indentation
