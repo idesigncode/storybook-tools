@@ -71,8 +71,8 @@
     "./themes.css": "./themes.css"
   },
   "dependencies": {
-    "@storybook/addon-docs": "^7.1.0",
-    "@storybook/theming": "^7.0.20",
+    "@storybook/addon-docs": "^7.1.1",
+    "@storybook/theming": "^7.1.1",
     "babel-plugin-react-docgen": "^4.2.1",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
@@ -85,14 +85,14 @@
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@babel/preset-react": "^7.22.5",
-    "@storybook/addon-coverage": "^0.0.8",
-    "@storybook/addon-interactions": "^7.1.0",
-    "@storybook/addons": "^7.0.20",
+    "@storybook/addon-coverage": "^0.0.9",
+    "@storybook/addon-interactions": "^7.1.1",
+    "@storybook/addons": "^7.1.1",
     "@storybook/jest": "^0.1.0",
-    "@storybook/react": "^7.0.20",
-    "@storybook/react-webpack5": "^7.1.0",
-    "@storybook/test-runner": "^0.10.0",
-    "@storybook/testing-library": "^0.1.0",
+    "@storybook/react": "^7.1.1",
+    "@storybook/react-webpack5": "^7.1.1",
+    "@storybook/test-runner": "^0.11.0",
+    "@storybook/testing-library": "^0.2.0",
     "autoprefixer": "^10.4.14",
     "cssnano": "^6.0.1",
     "eslint": "^8.45.0",
@@ -106,7 +106,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.64.1",
-    "storybook": "^7.1.0"
+    "storybook": "^7.1.1"
   },
   "peerDependencies": {
     "react": "^18.0.0",
