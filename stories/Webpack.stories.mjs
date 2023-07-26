@@ -53,17 +53,6 @@ const configInitial = {
   module: {
     rules: [{}, { type: 'asset/source' }, { type: 'javascript/auto' }],
   },
-  optimization: {
-    minimizer: [
-      {
-        options: {
-          minimizer: {
-            options: {},
-          },
-        },
-      },
-    ],
-  },
 };
 
 export const WebpackFinal = {
@@ -81,20 +70,6 @@ export const WebpackFinal = {
             { resourceQuery: { not: [/raw/] } },
             { type: 'asset/source' },
             { resourceQuery: { not: [/raw/] }, type: 'javascript/auto' },
-          ],
-        },
-        optimization: {
-          minimizer: [
-            {
-              options: {
-                minimizer: {
-                  options: {
-                    compress: false,
-                    format: { comments: true },
-                  },
-                },
-              },
-            },
           ],
         },
       });
