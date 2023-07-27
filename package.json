@@ -110,6 +110,6 @@
   },
   "peerDependencies": {
     "react": "^18.0.0",
-    "storybook": "^7.0.0"
+    "storybook": "^7.1.0"
   }
 }
