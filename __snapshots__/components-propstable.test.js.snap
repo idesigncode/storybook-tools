@@ -99,6 +99,16 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token tag punctuation">
                   &lt;
                 </span>
+                <span class="token tag punctuation">
+                  &gt;
+                </span>
+                <span class="token plain-text">
+                </span>
+                <span class="token plain-text">
+                </span>
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
                 <span class="token tag class-name">
                   Input
                 </span>
@@ -123,6 +133,16 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token tag punctuation">
                   /&gt;
+                </span>
+                <span class="token plain-text">
+                </span>
+                <span class="token plain-text">
+                </span>
+                <span class="token tag punctuation">
+                  &lt;/
+                </span>
+                <span class="token tag punctuation">
+                  &gt;
                 </span>
                 <span class="token punctuation">
                   ,
@@ -156,6 +176,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   string
                 </span>
@@ -166,6 +188,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token string">
                   "string"
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -184,6 +211,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -194,6 +223,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -566,10 +600,17 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token tag">
                   div
                 </span>
-                <span class="token tag">
+                <span class="token tag punctuation">
+                  &gt;
                 </span>
                 <span class="token tag punctuation">
-                  /&gt;
+                  &lt;/
+                </span>
+                <span class="token tag">
+                  div
+                </span>
+                <span class="token tag punctuation">
+                  &gt;
                 </span>
                 <span class="token punctuation">
                   ,
@@ -648,6 +689,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -658,6 +701,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -738,6 +786,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -748,6 +798,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -1540,6 +1595,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         required
       </span>
@@ -1553,6 +1610,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1572,6 +1631,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         value
       </span>
@@ -1582,6 +1643,11 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript string">
         "value"
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1608,6 +1674,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         required
       </span>
@@ -1621,6 +1689,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1640,6 +1710,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         value
       </span>
@@ -1650,6 +1722,11 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript string">
         "value"
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -2010,6 +2087,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   required
                 </span>
@@ -2023,6 +2102,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class="token punctuation">
                   ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -2042,6 +2123,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   value
                 </span>
@@ -2052,6 +2135,11 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class="token string">
                   "any"
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
