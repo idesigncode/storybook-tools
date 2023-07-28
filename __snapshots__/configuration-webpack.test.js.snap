@@ -175,8 +175,6 @@ exports[`Configuration/Webpack Implementation Custom Settings test 1`] = `
       <span class="token punctuation">
         ;
       </span>
-      <span class>
-      </span>
     </code>
   </pre>
   <button>
@@ -267,8 +265,6 @@ exports[`Configuration/Webpack Implementation test 1`] = `
       <span class="token punctuation">
         ;
       </span>
-      <span class>
-      </span>
     </code>
   </pre>
   <button>
@@ -306,8 +302,6 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
@@ -585,8 +579,6 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
