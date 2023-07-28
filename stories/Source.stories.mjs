@@ -38,7 +38,7 @@ export const Props = {
 
 export const Code = {
   args: {
-    code: `<Source code="<Component />" />`,
+    code: `<Source code="<Component />" />;`,
   },
   play: async ({ args, canvasElement, step }) => {
     const clipboardSpy = jest.spyOn(navigator.clipboard, 'writeText');

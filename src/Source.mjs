@@ -120,7 +120,7 @@ const Source = ({
         codeString = codeString.trim().replace(/;$/gm, '');
       }
 
-      setFormattedCodeString(codeString);
+      setFormattedCodeString(codeString.trim());
     })();
   }, [code]);
 
