@@ -31,6 +31,6 @@ storybook-static/
 /formatValueToString.mjs
 /getValueType.mjs
 /storybook.css
-/storybookConfig.mjs
 /styles.css
 /themes.css
+/webpackFinal.cjs

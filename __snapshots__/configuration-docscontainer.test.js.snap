@@ -25,7 +25,7 @@ exports[`Configuration/DocsContainer Docs Container Config test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/DocsContainer.mjs'
+        "@idesigncode/storybook-tools/DocsContainer.mjs"
       </span>
       <span class="token punctuation">
         ;

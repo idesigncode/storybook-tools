@@ -17,17 +17,7 @@ exports[`Configuration/Webpack Implementation Custom Settings test 1`] = `
         import
       </span>
       <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
         webpackFinal
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class>
       </span>
       <span class="token keyword">
         from
@@ -35,7 +25,7 @@ exports[`Configuration/Webpack Implementation Custom Settings test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        "@idesigncode/storybook-tools/storybookConfig.mjs"
+        "@idesigncode/storybook-tools/webpackFinal.cjs"
       </span>
       <span class="token punctuation">
         ;
@@ -200,17 +190,7 @@ exports[`Configuration/Webpack Implementation test 1`] = `
         import
       </span>
       <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
         webpackFinal
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class>
       </span>
       <span class="token keyword">
         from
@@ -218,7 +198,7 @@ exports[`Configuration/Webpack Implementation test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        "@idesigncode/storybook-tools/storybookConfig.mjs"
+        "@idesigncode/storybook-tools/webpackFinal.cjs"
       </span>
       <span class="token punctuation">
         ;
@@ -298,7 +278,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './Component.example.mjs?raw'
+        "./Component.example.mjs?raw"
       </span>
       <span class="token punctuation">
         ;
@@ -318,14 +298,9 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // @idesigncode/storybook-tools/storybookConfig.mjs
+        // @idesigncode/storybook-tools/webpackFinal.cjs
       </span>
       <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        export
       </span>
       <span class>
       </span>
@@ -462,7 +437,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        'asset/source'
+        "asset/source"
       </span>
       <span class="token punctuation">
         )
@@ -581,6 +556,24 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
         ;
       </span>
       <span class>
+      </span>
+      <span class>
+        module
+      </span>
+      <span class="token punctuation">
+        .
+      </span>
+      <span class>
+        exports
+      </span>
+      <span class="token operator">
+        =
+      </span>
+      <span class>
+        webpackFinal
+      </span>
+      <span class="token punctuation">
+        ;
       </span>
     </code>
   </pre>

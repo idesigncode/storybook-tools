@@ -19,7 +19,7 @@ exports[`Configuration/CSS Combined Stylesheet test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/styles.css'
+        "@idesigncode/storybook-tools/styles.css"
       </span>
       <span class="token punctuation">
         ;
@@ -641,8 +641,6 @@ exports[`Configuration/CSS Separate Stylesheets test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
