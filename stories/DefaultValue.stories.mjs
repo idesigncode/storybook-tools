@@ -44,6 +44,13 @@ export const AutomaticTypeSource = {
   },
 };
 
+export const ManualType = {
+  args: {
+    type: 'array',
+    value: 'value',
+  },
+};
+
 export const ManualTypeWithLink = {
   args: {
     link: 'url',
