@@ -7,7 +7,7 @@ export const Input = React.forwardRef((props, ref) => (
 ));
 Input.displayName = 'Input';
 
-const ComponentWithProps = () => {
+const ComponentExample = () => {
   const ref = React.useRef();
 
   return (
@@ -19,7 +19,7 @@ const ComponentWithProps = () => {
             true,
             Input,
             function () {},
-            <Input key={Input} />,
+            <Input key="Input" />,
             null,
             1,
             { string: 'string' },
@@ -56,4 +56,4 @@ const ComponentWithProps = () => {
   );
 };
 
-export default ComponentWithProps;
+export default ComponentExample;

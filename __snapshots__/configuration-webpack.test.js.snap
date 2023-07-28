@@ -280,7 +280,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -290,7 +290,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
         import
       </span>
       <span class>
-        ComponentWithPropsRaw
+        ComponentExampleRaw
       </span>
       <span class="token keyword">
         from
@@ -298,7 +298,7 @@ exports[`Configuration/Webpack Raw Import test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './ComponentWithProps.mjs?raw'
+        "./Component.example.mjs?raw"
       </span>
       <span class="token punctuation">
         ;
@@ -373,7 +373,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token comment">
-        // ? Enable 'raw imports' for all files
+        // Enable 'raw imports' for all files
       </span>
       <span class>
       </span>
@@ -462,7 +462,7 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        'asset/source'
+        "asset/source"
       </span>
       <span class="token punctuation">
         )
@@ -561,182 +561,6 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       </span>
       <span class>
       </span>
-      <span class="token comment">
-        // ? Enable correct display of dynamic source code in production
-      </span>
-      <span class>
-      </span>
-      <span class>
-        config
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        optimization
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class="token function">
-        map
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token punctuation">
-        (
-      </span>
-      <span class="token parameter">
-        minimizer
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class>
-      </span>
-      <span class="token operator">
-        =&gt;
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        options
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        options
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        compress
-      </span>
-      <span class="token operator">
-        =
-      </span>
-      <span class>
-      </span>
-      <span class="token boolean">
-        false
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        options
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        options
-      </span>
-      <span class="token punctuation">
-        .
-      </span>
-      <span class>
-        format
-      </span>
-      <span class="token operator">
-        =
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        {
-      </span>
-      <span class>
-      </span>
-      <span class="token literal-property property">
-        comments
-      </span>
-      <span class="token operator">
-        :
-      </span>
-      <span class>
-      </span>
-      <span class="token boolean">
-        true
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token keyword">
-        return
-      </span>
-      <span class>
-        minimizer
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
-      <span class="token punctuation">
-        }
-      </span>
-      <span class="token punctuation">
-        )
-      </span>
-      <span class="token punctuation">
-        ;
-      </span>
-      <span class>
-      </span>
-      <span class>
-      </span>
       <span class="token keyword">
         return
       </span>
@@ -755,8 +579,6 @@ exports[`Configuration/Webpack Webpack Final Config test 1`] = `
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>

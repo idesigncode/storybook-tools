@@ -53,17 +53,6 @@ const configInitial = {
   module: {
     rules: [{}, { type: 'asset/source' }, { type: 'javascript/auto' }],
   },
-  optimization: {
-    minimizer: [
-      {
-        options: {
-          minimizer: {
-            options: {},
-          },
-        },
-      },
-    ],
-  },
 };
 
 export const WebpackFinal = {
@@ -83,20 +72,6 @@ export const WebpackFinal = {
             { resourceQuery: { not: [/raw/] }, type: 'javascript/auto' },
           ],
         },
-        optimization: {
-          minimizer: [
-            {
-              options: {
-                minimizer: {
-                  options: {
-                    compress: false,
-                    format: { comments: true },
-                  },
-                },
-              },
-            },
-          ],
-        },
       });
     });
   },
@@ -106,8 +81,8 @@ export const WebpackFinal = {
 export const RawImport = {
   args: {
     code: [
-      `// Stories of Component.mjs`,
-      `import ComponentWithPropsRaw from './ComponentWithProps.mjs?raw';`,
+      `// Component.stories.mjs`,
+      `import ComponentExampleRaw from './Component.example.mjs?raw';`,
     ].join('\n'),
     importPathReplacements: false,
   },

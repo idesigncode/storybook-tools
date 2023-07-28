@@ -7,7 +7,7 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -25,7 +25,7 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/DefaultValue.mjs'
+        "@idesigncode/storybook-tools/DefaultValue.mjs"
       </span>
       <span class="token punctuation">
         ;
@@ -61,6 +61,9 @@ exports[`Components/DefaultValue Automatic Type Source test 1`] = `
       </span>
       <span class="token tag punctuation">
         /&gt;
+      </span>
+      <span class="token punctuation">
+        ;
       </span>
     </code>
   </pre>
@@ -112,7 +115,7 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -130,7 +133,7 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/DefaultValue.mjs'
+        "@idesigncode/storybook-tools/DefaultValue.mjs"
       </span>
       <span class="token punctuation">
         ;
@@ -201,6 +204,9 @@ exports[`Components/DefaultValue Manual Type With Link Source test 1`] = `
       <span class="token tag punctuation">
         /&gt;
       </span>
+      <span class="token punctuation">
+        ;
+      </span>
     </code>
   </pre>
   <button>
@@ -227,7 +233,7 @@ exports[`Components/DefaultValue Manual Type With Link test 1`] = `
              target="_blank"
              rel="noreferrer"
           >
-            { value }
+            {value}
           </a>
         </td>
       </tr>
@@ -346,7 +352,7 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Component.mjs
+        // Component.stories.mjs
       </span>
       <span class>
       </span>
@@ -364,7 +370,7 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/DefaultValue.mjs'
+        "@idesigncode/storybook-tools/DefaultValue.mjs"
       </span>
       <span class="token punctuation">
         ;
@@ -378,8 +384,6 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       </span>
       <span class="token tag class-name">
         DefaultValue
-      </span>
-      <span class="token tag">
       </span>
       <span class="token tag">
       </span>
@@ -400,8 +404,6 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       </span>
       <span class="token tag">
       </span>
-      <span class="token tag">
-      </span>
       <span class="token tag attr-name">
         value
       </span>
@@ -416,8 +418,6 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
-      <span class="token tag script language-javascript">
-      </span>
       <span class="token tag script language-javascript literal-property property">
         current
       </span>
@@ -429,11 +429,6 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       <span class="token tag script language-javascript string">
         "[Circular]"
       </span>
-      <span class="token tag script language-javascript punctuation">
-        ,
-      </span>
-      <span class="token tag script language-javascript">
-      </span>
       <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript punctuation">
@@ -441,13 +436,14 @@ exports[`Components/DefaultValue Ref Type Source test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         }
-      </span>
-      <span class="token tag">
       </span>
       <span class="token tag">
       </span>
       <span class="token tag punctuation">
         /&gt;
+      </span>
+      <span class="token punctuation">
+        ;
       </span>
     </code>
   </pre>

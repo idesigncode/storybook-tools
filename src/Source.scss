@@ -2,12 +2,30 @@
 @use 'code';
 
 .Source {
+  --code-highlight_color: #393a34;
+  --code-highlight-comment_color: #c5c5c5;
+  --code-highlight-string_color: #619932;
+  --code-highlight-tag-parameter_color: #006dcc;
+  --code-highlight-tag-function-attr-name-property_color: #b474dd;
+  --code-highlight-tag-boolean-number_color: #dd9074;
+  --code-highlight-tag-keyword-attr-value_color: #0000ff;
+  --code-highlight-tag-punctuation_color: inherit;
+  --code-highlight-tag-class-name-maybe-class-name_color: #36acaa;
   --source_background-color: #ffffff;
   --source-button_color: #1b1c1d;
   --source-button_background-color: #ffffff;
   --source-button_border-color: hsla(203, 50%, 30%, 0.15);
 
   &.dark {
+    --code-highlight_color: #ededed;
+    --code-highlight-comment_color: #7c7c7c;
+    --code-highlight-string_color: #92c379;
+    --code-highlight-tag-parameter_color: #a8ff60;
+    --code-highlight-tag-function-attr-name-property_color: #96cbfe;
+    --code-highlight-tag-boolean-number_color: #f19c7e;
+    --code-highlight-tag-keyword-attr-value_color: #b474dd;
+    --code-highlight-tag-punctuation_color: #ededed;
+    --code-highlight-tag-class-name-maybe-class-name_color: #ffffb6;
     --source_background-color: #1b1c1d;
     --source-button_color: #c9cdcf;
     --source-button_background-color: #1b1c1d;
@@ -24,7 +42,8 @@
   font-size: 1.3rem;
   line-height: 1.9rem;
   border-radius: 0.4rem;
-  box-shadow: rgb(0 0 0 / 10%) 0 0.1rem 0.3rem 0.1rem,
+  box-shadow:
+    rgb(0 0 0 / 10%) 0 0.1rem 0.3rem 0.1rem,
     rgb(0 0 0 / 7%) 0 0 0 0.1rem;
 
   &:last-child {
@@ -57,9 +76,17 @@
     cursor: pointer;
     font-size: 12px;
     line-height: 16px;
-    font-family: 'Nunito Sans', -apple-system, '.SFNSText-Regular',
-      'San Francisco', BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
-      Helvetica, Arial, sans-serif;
+    font-family:
+      'Nunito Sans',
+      -apple-system,
+      '.SFNSText-Regular',
+      'San Francisco',
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Helvetica Neue',
+      Helvetica,
+      Arial,
+      sans-serif;
     font-weight: 700;
     border-radius: 0.4rem 0 0 0;
     border-top: 1px solid var(--source-button_border-color);

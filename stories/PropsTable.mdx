@@ -7,14 +7,13 @@ import * as PropsTableStories from './PropsTable.stories.mjs';
 
 Adds a table of props details automatically generated from the props given to a single child component.
 
-Can be used within [stories](https://storybook.js.org/docs/react/writing-stories/introduction) or directly in [MDX pages](https://storybook.js.org/docs/react/writing-docs/mdx).
-
 <Story of={PropsTableStories.Props} />
 
 > #### Note:
 >
 > - The `Component.propTypes` are used to indicate if each prop is `required`.
 > - A prop's default value will be used if the prop on the child component has no value.
+> - The value of a prop is displayed with the **_asynchronously rendered_** [Source](/docs/components-source--docs) component.
 
 ### Implementation:
 

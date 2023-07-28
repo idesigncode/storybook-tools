@@ -104,6 +104,23 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token tag">
                 </span>
+                <span class="token tag attr-name">
+                  key
+                </span>
+                <span class="token tag attr-value punctuation attr-equals">
+                  =
+                </span>
+                <span class="token tag attr-value punctuation">
+                  "
+                </span>
+                <span class="token tag attr-value">
+                  Input
+                </span>
+                <span class="token tag attr-value punctuation">
+                  "
+                </span>
+                <span class="token tag">
+                </span>
                 <span class="token tag punctuation">
                   /&gt;
                 </span>
@@ -213,8 +230,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token punctuation">
                   ]
                 </span>
-                <span class>
-                </span>
               </code>
             </pre>
             <button>
@@ -311,8 +326,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token punctuation">
                   }
-                </span>
-                <span class>
                 </span>
               </code>
             </pre>
@@ -697,8 +710,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token punctuation">
                   }
                 </span>
-                <span class>
-                </span>
               </code>
             </pre>
             <button>
@@ -742,8 +753,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token punctuation">
                   }
-                </span>
-                <span class>
                 </span>
               </code>
             </pre>
@@ -818,7 +827,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // InputWithProps.mjs (the "example component")
+        // Input.example.mjs (the "example component")
       </span>
       <span class>
       </span>
@@ -836,7 +845,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        'react'
+        "react"
       </span>
       <span class="token punctuation">
         ;
@@ -857,7 +866,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/PropsTable.mjs'
+        "@idesigncode/storybook-tools/PropsTable.mjs"
       </span>
       <span class="token punctuation">
         ;
@@ -878,7 +887,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './Input.mjs'
+        "./Input.mjs"
       </span>
       <span class="token punctuation">
         ;
@@ -893,7 +902,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
       <span class>
       </span>
       <span class="token function-variable function">
-        InputWithProps
+        InputExample
       </span>
       <span class>
       </span>
@@ -960,7 +969,7 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
         (
       </span>
       <span class="token string">
-        ''
+        ""
       </span>
       <span class="token punctuation">
         )
@@ -1145,12 +1154,10 @@ exports[`Components/PropsTable Automatic Props Source test 1`] = `
         default
       </span>
       <span class>
-        InputWithProps
+        InputExample
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
@@ -1253,17 +1260,12 @@ exports[`Components/PropsTable Automatic Props test 1`] = `
                 <span class="token punctuation">
                   )
                 </span>
-                <span class="token punctuation">
-                  ;
-                </span>
                 <span class>
                 </span>
                 <span class>
                 </span>
                 <span class="token punctuation">
                   }
-                </span>
-                <span class>
                 </span>
               </code>
             </pre>
@@ -1314,7 +1316,7 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // InputWithProps.mjs (the "example component")
+        // Input.example.mjs (the "example component")
       </span>
       <span class>
       </span>
@@ -1389,7 +1391,7 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       <span class>
       </span>
       <span class="token function-variable function">
-        InputWithProps
+        InputExample
       </span>
       <span class>
       </span>
@@ -1806,12 +1808,10 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
         default
       </span>
       <span class>
-        InputWithProps
+        InputExample
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
@@ -2068,8 +2068,6 @@ exports[`Components/PropsTable Props test 1`] = `
                 <span class="token punctuation">
                   }
                 </span>
-                <span class>
-                </span>
               </code>
             </pre>
             <button>
@@ -2090,7 +2088,7 @@ exports[`Components/PropsTable Raw Import Displayed Source test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Source code displayed by &lt;Source code={InputWithPropsRaw} /&gt;
+        // Source code displayed by &lt;Source code={InputExampleRaw} /&gt;
       </span>
       <span class>
       </span>
@@ -2144,7 +2142,7 @@ exports[`Components/PropsTable Raw Import Displayed Source test 1`] = `
       <span class>
       </span>
       <span class="token function-variable function">
-        InputWithProps
+        InputExample
       </span>
       <span class>
       </span>
@@ -2350,12 +2348,10 @@ exports[`Components/PropsTable Raw Import Displayed Source test 1`] = `
         default
       </span>
       <span class>
-        InputWithProps
+        InputExample
       </span>
       <span class="token punctuation">
         ;
-      </span>
-      <span class>
       </span>
     </code>
   </pre>
@@ -2372,7 +2368,7 @@ exports[`Components/PropsTable Raw Import test 1`] = `
           style="white-space: pre;"
     >
       <span class="token comment">
-        // Stories of Input.mjs
+        // Input.stories.mjs
       </span>
       <span class>
       </span>
@@ -2382,7 +2378,7 @@ exports[`Components/PropsTable Raw Import test 1`] = `
         import
       </span>
       <span class>
-        InputWithPropsRaw
+        InputExampleRaw
       </span>
       <span class="token keyword">
         from
@@ -2390,7 +2386,7 @@ exports[`Components/PropsTable Raw Import test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        './InputWithProps.mjs?raw'
+        "./Input.example.mjs?raw"
       </span>
       <span class="token punctuation">
         ;
@@ -2417,7 +2413,7 @@ exports[`Components/PropsTable Raw Import test 1`] = `
         {
       </span>
       <span class="token tag script language-javascript">
-        InputWithPropsRaw
+        InputExampleRaw
       </span>
       <span class="token tag script language-javascript punctuation">
         }
@@ -2426,6 +2422,9 @@ exports[`Components/PropsTable Raw Import test 1`] = `
       </span>
       <span class="token tag punctuation">
         /&gt;
+      </span>
+      <span class="token punctuation">
+        ;
       </span>
     </code>
   </pre>

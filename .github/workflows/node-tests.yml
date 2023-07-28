@@ -1,12 +1,15 @@
 # This workflow runs install-test across different versions of node
 
-name: Node.js Install Test
+name: Node Tests
 
 on:
   push:
     branches: ['main']
   pull_request:
     branches: ['main']
+
+env:
+  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
 jobs:
   build:
@@ -24,5 +27,3 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install-test
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

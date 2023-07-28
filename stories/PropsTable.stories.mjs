@@ -1,15 +1,13 @@
 import React from 'react';
 import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 import formatValueToString from '../src/formatValueToString.mjs';
 import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
+import ComponentExample from './Component.example.mjs';
 import Component from './Component.mjs';
-import ComponentWithProps from './ComponentWithProps.mjs';
-import InputWithProps from './InputWithProps.mjs';
-import InputWithPropsRaw from './InputWithProps.mjs?raw';
+import InputExample from './Input.example.mjs';
+import InputExampleRaw from './Input.example.mjs?raw';
 
 export default {
   title: 'Components/PropsTable',
@@ -35,12 +33,13 @@ export const Props = {
     hideChildren: true,
   },
 };
+
 export const AutomaticProps = {
-  render: InputWithProps,
+  render: InputExample,
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByDisplayValue('');
-    const td = canvas.getByText('""');
+    const td = await waitFor(() => canvas.getByText('""'));
 
     await step(`Update example component value`, async () => {
       expect(input).not.toHaveValue();
@@ -54,7 +53,7 @@ export const AutomaticProps = {
   },
 };
 
-const InputWithPropsRawWithoutProps = InputWithPropsRaw
+const InputExampleRawWithoutProps = InputExampleRaw
   // Remove "props" from example component
   .replace(/\s?{?\.*?props}?/gm, '');
 
@@ -62,8 +61,8 @@ export const AutomaticPropsSource = {
   render: () => (
     <Source
       code={[
-        `// InputWithProps.mjs (the "example component")`,
-        ...InputWithPropsRawWithoutProps,
+        `// Input.example.mjs (the "example component")`,
+        ...InputExampleRawWithoutProps,
       ].join('\n')}
       removePropsTable={false}
     />
@@ -74,25 +73,27 @@ export const RawImport = {
   render: () => (
     <Source
       code={[
-        `// Stories of Input.mjs`,
-        `import InputWithPropsRaw from './InputWithProps.mjs?raw';`,
+        `// Input.stories.mjs`,
+        `import InputExampleRaw from './Input.example.mjs?raw';`,
         ``,
-        `<Source code={InputWithPropsRaw} />`,
+        `<Source code={InputExampleRaw} />`,
       ].join('\n')}
       importPathReplacements={false}
     />
   ),
 };
 
-const InputWithPropsRawWithoutPropsComments =
-  InputWithPropsRawWithoutProps.replace(/(<Input\s*)([^]*)(onChange)/g, '$1$3');
+const InputExampleRawWithoutPropsComments = InputExampleRawWithoutProps.replace(
+  /(<Input\s*)([^]*)(onChange)/g,
+  '$1$3',
+);
 
 export const RawImportDisplayedSource = {
   render: () => (
     <Source
       code={[
-        `// Source code displayed by <Source code={InputWithPropsRaw} />`,
-        ...InputWithPropsRawWithoutPropsComments,
+        `// Source code displayed by <Source code={InputExampleRaw} />`,
+        ...InputExampleRawWithoutPropsComments,
       ].join('\n')}
     />
   ),
@@ -114,30 +115,24 @@ export const ManualTypeWithRequired = {
     },
     hideChildren: true,
   },
-  render: InputWithProps,
+  render: InputExample,
 };
 
 export const ManualTypeWithRequiredSource = {
   render: () => {
     const props = formatValueToString(
       ManualTypeWithRequired.args.props,
-      'object'
+      'object',
     );
     return (
       <Source
-        code={prettier.format(
-          [
-            `// InputWithProps.mjs (the "example component")`,
-            InputWithPropsRawWithoutPropsComments.replace(
-              '<PropsTable>',
-              `<PropsTable hideChildren={true} props={${props}}>`
-            ),
-          ].join('\n'),
-          {
-            parser: 'babel',
-            plugins: [prettierBabel],
-          }
-        )}
+        code={[
+          `// Input.example.mjs (the "example component")`,
+          InputExampleRawWithoutPropsComments.replace(
+            '<PropsTable>',
+            `<PropsTable hideChildren={true} props={${props}}>`,
+          ),
+        ].join('\n')}
         removePropsTable={false}
       />
     );
@@ -145,5 +140,5 @@ export const ManualTypeWithRequiredSource = {
 };
 
 export const AllPropTypes = {
-  render: ComponentWithProps,
+  render: ComponentExample,
 };

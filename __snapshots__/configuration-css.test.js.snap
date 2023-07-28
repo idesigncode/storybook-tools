@@ -19,7 +19,625 @@ exports[`Configuration/CSS Combined Stylesheet test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '@idesigncode/storybook-tools/styles.css'
+        "@idesigncode/storybook-tools/styles.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Configuration/CSS Separate Import Vars test 1`] = `
+<div class="Source sb-unstyled "
+     style="--code-highlight-tag-keyword-attr-value_color: unset;"
+>
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // Light &amp; dark mode theme vars
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        blockquote_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        blockquote_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        left
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        sb_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        table
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        td_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        table
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        th_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        table
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        th_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Source component theme vars
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        comment_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        string_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        boolean
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        number_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class="token keyword">
+        class
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        name
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        maybe
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class="token keyword">
+        class
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        name_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class="token keyword">
+        function
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        attr
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        name
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        property_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        keyword
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        attr
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        value_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        parameter_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        tag
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        punctuation_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        code
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        highlight_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        source
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        button_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        source
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        button_border
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        source
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        button_color
+      </span>
+      <span class>
+      </span>
+      <span class="token operator">
+        --
+      </span>
+      <span class>
+        source_background
+      </span>
+      <span class="token operator">
+        -
+      </span>
+      <span class>
+        color
+      </span>
+    </code>
+  </pre>
+  <button>
+    Copy
+  </button>
+</div>
+`;
+
+exports[`Configuration/CSS Separate Stylesheets test 1`] = `
+<div class="Source sb-unstyled ">
+  <pre class="prismjs">
+    <code class="language-jsx"
+          style="white-space: pre;"
+    >
+      <span class="token comment">
+        // .storybook/preview.mjs
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // General styles
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/storybook-tools/themes.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // See below for specific CSS vars
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/storybook-tools/storybook.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Overrides some default Storybook styles
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token comment">
+        // Component specific styles
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/storybook-tools/DefaultValue.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/storybook-tools/PropsTable.css"
+      </span>
+      <span class="token punctuation">
+        ;
+      </span>
+      <span class>
+      </span>
+      <span class>
+      </span>
+      <span class="token keyword">
+        import
+      </span>
+      <span class>
+      </span>
+      <span class="token string">
+        "@idesigncode/storybook-tools/Source.css"
       </span>
       <span class="token punctuation">
         ;
