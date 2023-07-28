@@ -7,7 +7,7 @@ export default {
       name: '@storybook/addon-coverage',
       options: {
         istanbul: {
-          include: ['**/src/**'],
+          include: ['**/src/**'], // Prevent coverage code injection in PropsTable values
         },
       },
     },
@@ -21,10 +21,10 @@ export default {
   env: (config) => ({
     ...config,
     IMPORT_PATH_REPLACEMENTS: JSON.stringify({
-      '^': `${packageJson.name}/`, // ? Prepend package name to relative paths
-      '../': '', // ? Remove "parent directory" relative path segments
-      './': '', // ? Remove "current directory" relative path segments
-      'src/': '', // ? Remove "src directory" path segments
+      '^': `${packageJson.name}/`, // Prepend package name to relative paths
+      '../': '', // Remove "parent directory" relative path segments
+      './': '', // Remove "current directory" relative path segments
+      'src/': '', // Remove "src directory" path segments
     }),
   }),
   framework: {
@@ -32,17 +32,5 @@ export default {
     options: {},
   },
   stories: ['../**/Introduction.mdx', '../**/*.mdx', '../**/*.stories.*'],
-  storyIndexers: (indexers) => {
-    // ? Extend js story indexer for mjs
-    return indexers.map((indexer) => {
-      if (`${indexer.test}`.includes(`[tj]sx?$`)) {
-        return {
-          ...indexer,
-          test: /(stories|story)\.m?[tj]sx?$/,
-        };
-      }
-      return indexer;
-    });
-  },
   webpackFinal,
 };

@@ -9,6 +9,14 @@ The default themes and component styles can be imported into `.storybook/preview
 
 <Story of={CSSStories.CombinedStylesheet} />
 
+For further control, all styles can also be imported as separate css files:
+
+<Story of={CSSStories.SeparateStylesheets} />
+
+There are light & dark theme values for the following [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/--*):
+
+<Story of={CSSStories.SeparateImportVars} />
+
 > #### See also:
 >
 > - [DocsContainer](/docs/configuration-docscontainer--docs) - light and dark mode functionality for Storybook Docs.

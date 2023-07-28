@@ -22,18 +22,18 @@ const formatNodeToJsxString = (node) => {
       return `as={${displayName || render.displayName}}`;
     });
 
-  // ? Format child props for readability
+  // Format child props for readability
   return (
     prettier
       .format(result, {
         parser: 'babel',
         plugins: [prettierBabel],
       })
-      // ? Remove React Fragments & trailing semicolon
+      // Remove React Fragments & trailing semicolon
       .replace(/(<\/?>;?)+/gm, '')
-      // ? Re-align indentation
+      // Re-align indentation
       .replace(/^\s\s?/gm, '')
-      // ? Trim any leading/trailing spacing
+      // Trim any leading/trailing spacing
       .trim()
   );
 };
