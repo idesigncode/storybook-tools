@@ -3,7 +3,7 @@
  * @param {Object} config
  * @returns {Promise<*>}
  */
-export const webpackFinal = async (config) => {
+const webpackFinal = async (config) => {
   // Enable 'raw imports' for all files
   config.module.rules.map((rule) => {
     if (!rule.type || rule.type !== 'asset/source') {
@@ -14,3 +14,5 @@ export const webpackFinal = async (config) => {
 
   return config;
 };
+
+module.exports = webpackFinal;
