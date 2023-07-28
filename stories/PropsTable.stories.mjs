@@ -1,8 +1,6 @@
 import React from 'react';
 import { expect } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 import formatValueToString from '../src/formatValueToString.mjs';
 import PropsTable from '../src/PropsTable.mjs';
 import Source from '../src/Source.mjs';
@@ -35,12 +33,13 @@ export const Props = {
     hideChildren: true,
   },
 };
+
 export const AutomaticProps = {
   render: InputExample,
   play: async ({ canvasElement, step }) => {
     const canvas = within(canvasElement);
     const input = canvas.getByDisplayValue('');
-    const td = canvas.getByText('""');
+    const td = await waitFor(() => canvas.getByText('""'));
 
     await step(`Update example component value`, async () => {
       expect(input).not.toHaveValue();
@@ -127,19 +126,13 @@ export const ManualTypeWithRequiredSource = {
     );
     return (
       <Source
-        code={prettier.format(
-          [
-            `// Input.example.mjs (the "example component")`,
-            InputExampleRawWithoutPropsComments.replace(
-              '<PropsTable>',
-              `<PropsTable hideChildren={true} props={${props}}>`,
-            ),
-          ].join('\n'),
-          {
-            parser: 'babel',
-            plugins: [prettierBabel],
-          },
-        )}
+        code={[
+          `// Input.example.mjs (the "example component")`,
+          InputExampleRawWithoutPropsComments.replace(
+            '<PropsTable>',
+            `<PropsTable hideChildren={true} props={${props}}>`,
+          ),
+        ].join('\n')}
         removePropsTable={false}
       />
     );

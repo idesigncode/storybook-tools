@@ -1,5 +1,3 @@
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
 import formatNodeToJsxString from './formatNodeToJsxString.mjs';
 import getValueType from './getValueType.mjs';
 
@@ -22,19 +20,12 @@ const formatValueToString = (value, valueType) => {
     if (value instanceof HTMLElement && value.outerHTML) {
       return value.outerHTML.replace(/(<\w*)[^]*/gm, '$1 />');
     }
-    return value instanceof Array
-      ? value.map(formatNodeToJsxString).join('\n')
-      : formatNodeToJsxString(value);
-  }
-
-  if (valueType === 'function') {
-    const functionName = value.name ? '' : 'function temporary';
-    return prettier
-      .format(`${functionName}${value}`, {
-        parser: 'babel',
-        plugins: [prettierBabel],
-      })
-      .replace(functionName ? /^function temporary/ : '', '');
+    if (value instanceof Array) {
+      return `<>${value
+        .map((valueNode) => formatValueToString(valueNode, valueType))
+        .join('')}</>`;
+    }
+    return formatNodeToJsxString(value);
   }
 
   if (valueType === 'array' || valueType.includes('object')) {
@@ -58,15 +49,7 @@ const formatValueToString = (value, valueType) => {
       valueData = stringifyJSON(value);
     }
 
-    return (
-      prettier
-        .format(`const temporary = ${valueData}`, {
-          parser: 'babel',
-          plugins: [prettierBabel],
-        })
-        // Remove temporary const declaration
-        .replace(/^const temporary = ([^]*);$/gm, '$1')
-    );
+    return valueData;
   }
 
   return `${value}`;

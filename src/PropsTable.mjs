@@ -14,7 +14,7 @@ const PropsTableRow = ({ isRequired, propName, type, value }) => {
       <td>
         <code>{type}</code>
       </td>
-      <td>{value && <Source code={value} />}</td>
+      <td>{value && <Source code={value} removeTrailingSemicolon={true} />}</td>
     </tr>
   );
 };

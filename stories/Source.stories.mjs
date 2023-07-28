@@ -1,6 +1,6 @@
 import React from 'react';
 import { expect, jest } from '@storybook/jest';
-import { userEvent, within } from '@storybook/testing-library';
+import { userEvent, waitFor, within } from '@storybook/testing-library';
 import { useDarkMode } from 'storybook-dark-mode';
 import packageJson from '../package.json';
 import PropsTable from '../src/PropsTable.mjs';
@@ -13,7 +13,14 @@ export default {
 
 export const Props = {
   args: {
-    children: <Source code="<Component />" removePropsTable={true} />,
+    children: (
+      <Source
+        code="<Component />"
+        format={true}
+        removePropsTable={true}
+        removeTrailingSemicolon={false}
+      />
+    ),
     props: {
       dark: {
         type: 'boolean',
@@ -38,7 +45,10 @@ export const Code = {
 
     await step(`Button onClick will copy code block contents`, async () => {
       expect(navigator.clipboard.writeText).not.toBeCalled();
-      await userEvent.click(within(canvasElement).getByText('Copy'));
+      const button = await waitFor(() =>
+        within(canvasElement).getByText('Copy'),
+      );
+      await userEvent.click(button);
       expect(navigator.clipboard.writeText).toHaveBeenCalledWith(args.code);
     });
 
@@ -55,6 +65,13 @@ export const Dark = {
         dark={!isDark}
       />
     );
+  },
+};
+
+export const Unformatted = {
+  args: {
+    code: `<Source code="This would cause line wrapping if format was enabled" format={false} />`,
+    format: false,
   },
 };
 
