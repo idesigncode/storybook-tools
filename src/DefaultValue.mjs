@@ -29,7 +29,7 @@ const DefaultValue = ({ link: initialLink, type, value }) => {
                   {valueString}
                 </a>
               ) : (
-                <Source code={valueString} />
+                <Source code={valueString} removeTrailingSemicolon={true} />
               )}
             </td>
           </tr>

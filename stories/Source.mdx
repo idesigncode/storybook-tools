@@ -12,20 +12,37 @@ Similar to [Storybook's Source block](https://storybook.js.org/docs/react/api/do
 
 <Story of={SourceStories.Props} />
 
+> #### Note:
+>
+> - `Source` is an **_asynchronously rendered_** component.
+
 ### Implementation:
 
 To render a source code block provide any string as `code`:
 
 <Story of={SourceStories.Code} />
 
-The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode), but this can be overwritten with the boolean `dark`:
-
-<Story of={SourceStories.Dark} />
-
 > #### Note:
 >
 > - As `Source` is designed to show production-ready source code, it will automatically remove any use of [PropsTable](/docs/components-propstable--docs).
 > - This can be disabled by setting `removePropsTable` to `false`.
+
+The default theme is set with the `useDarkMode` hook from [storybook-dark-mode](https://github.com/hipstersmoothie/storybook-dark-mode), but this can be overwritten with the boolean `dark`:
+
+<Story of={SourceStories.Dark} />
+
+### Formatting:
+
+The `Source` component uses [Prettier](https://prettier.io/) to automatically format your `code` string.
+
+If you do not wish to use this functionality, it can be disabled with `format`:
+
+<Story of={SourceStories.Unformatted} />
+
+> #### Note:
+>
+> - If the `format` is enabled the formatting will apply a trailing semicolon.
+> - You can prevent this by enabling the `removeTrailingSemicolon` option.
 
 ### Import Path Replacements (optional):
 
