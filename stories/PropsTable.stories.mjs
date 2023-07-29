@@ -143,6 +143,18 @@ export const AllPropTypes = {
   render: ComponentExample,
 };
 
+export const ArrayOfChildren = {
+  args: {
+    children: (
+      <PropsTable>
+        <Component />
+        <div />
+      </PropsTable>
+    ),
+    hideChildren: true,
+  },
+};
+
 export const RefValueUpdates = {
   render: () => {
     const [value, setValue] = React.useState('');
