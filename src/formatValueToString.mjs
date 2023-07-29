@@ -1,6 +1,9 @@
 import formatNodeToJsxString from './formatNodeToJsxString.mjs';
 import getValueType from './getValueType.mjs';
 
+const parser = new DOMParser();
+const serializer = new XMLSerializer();
+
 const addRemoveOuterQuotes = (value) => {
   return `<REMOVE_OUTER_QUOTES>${value}</REMOVE_OUTER_QUOTES>`;
 };
@@ -34,8 +37,22 @@ const formatValueToString = (code, type) => {
       if (valueType === 'node') {
         // HTML elements
         if (value instanceof HTMLElement && value.outerHTML) {
-          return addRemoveOuterQuotes(value.outerHTML);
+          // * Prettier can't always format the HTMLElements returned by JSX (e.g. <input value"">)
+          // * To correct this the value.outerHTML must be parsed & serialized into valid XHTML
+          // ? Reference: https://stackoverflow.com/a/12092919
+          const valueAsParsedDocument = parser.parseFromString(
+            `${value.outerHTML}`,
+            'text/html',
+          );
+          const valueAsSerializedDocument = serializer.serializeToString(
+            valueAsParsedDocument,
+          );
+          const [, valueAsValidXhtml] =
+            valueAsSerializedDocument.split(/<\/?body>/gm);
+
+          return addRemoveOuterQuotes(valueAsValidXhtml);
         }
+
         // JSX elements
         return addRemoveOuterQuotes(
           `<>${
