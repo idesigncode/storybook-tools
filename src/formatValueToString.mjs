@@ -55,11 +55,11 @@ const formatValueToString = (code, type) => {
 
         // JSX elements
         return addRemoveOuterQuotes(
-          `<>${
+          `${
             value instanceof Array
-              ? addRemoveOuterQuotes(value.map(formatNodeToJsxString).join(''))
+              ? `<>${value.map(formatNodeToJsxString).join('')}</>`
               : formatNodeToJsxString(value)
-          }</>`,
+          }`,
         );
       }
 

@@ -99,16 +99,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token tag punctuation">
                   &lt;
                 </span>
-                <span class="token tag punctuation">
-                  &gt;
-                </span>
-                <span class="token plain-text">
-                </span>
-                <span class="token plain-text">
-                </span>
-                <span class="token tag punctuation">
-                  &lt;
-                </span>
                 <span class="token tag class-name">
                   Input
                 </span>
@@ -133,16 +123,6 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token tag punctuation">
                   /&gt;
-                </span>
-                <span class="token plain-text">
-                </span>
-                <span class="token plain-text">
-                </span>
-                <span class="token tag punctuation">
-                  &lt;/
-                </span>
-                <span class="token tag punctuation">
-                  &gt;
                 </span>
                 <span class="token punctuation">
                   ,
@@ -873,6 +853,80 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
   </table>
 </div>
 <input style="display: none;">
+`;
+
+exports[`Components/PropsTable Array Of Children test 1`] = `
+<div class="propsTable sb-unstyled">
+  <table aria-hidden="false">
+    <thead>
+      <tr>
+        <th>
+          Prop
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          children
+          <span class="requiredProp">
+            *
+          </span>
+        </td>
+        <td>
+          <code>
+            node
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
+                <span class="token tag class-name">
+                  Component
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag punctuation">
+                  /&gt;
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
+                <span class="token tag">
+                  div
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag punctuation">
+                  /&gt;
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`Components/PropsTable Automatic Props Source test 1`] = `
