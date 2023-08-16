@@ -14,7 +14,7 @@ const PropsTableRow = ({ isRequired, propName, type, value }) => {
       <td>
         <code>{type}</code>
       </td>
-      <td>{value && <Source code={value} />}</td>
+      <td>{value && <Source code={value} removeTrailingSemicolon={true} />}</td>
     </tr>
   );
 };
@@ -32,7 +32,9 @@ const PropsTable = ({ children, hideChildren = false, props = {} }) => {
   const dynamicProps = { ...initialProps, ref };
 
   const docgenProps =
-    children.type && children.type.__docgenInfo
+    children.type &&
+    children.type.__docgenInfo &&
+    children.type.__docgenInfo.props
       ? children.type.__docgenInfo.props
       : {};
 
@@ -100,7 +102,7 @@ PropsTable.propTypes = {
       required: PropTypes.bool,
       type: PropTypes.string,
       value: PropTypes.any,
-    })
+    }),
   ),
 };
 

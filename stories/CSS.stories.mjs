@@ -50,8 +50,8 @@ const getCSSVarsArray = (string) => {
           return cssVarDeclaration;
         })
         // Sort alphabetically
-        .sort()
-    )
+        .sort(),
+    ),
   );
 };
 
@@ -69,5 +69,6 @@ export const SeparateImportVars = {
     style: {
       '--code-highlight-tag-keyword-attr-value_color': 'unset',
     },
+    format: false,
   },
 };

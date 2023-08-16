@@ -1,7 +1,7 @@
 import { expect } from '@storybook/jest';
 import Source from '../src/Source.mjs';
-import { webpackFinal } from '../src/storybookConfig.mjs';
-import storybookConfigRaw from '../src/storybookConfig.mjs?raw';
+import webpackFinal from '../src/webpackFinal.cjs';
+import storybookConfigRaw from '../src/webpackFinal.cjs?raw';
 
 export default {
   title: 'Configuration/Webpack',
@@ -12,7 +12,7 @@ export const Implementation = {
   args: {
     code: [
       `// .storybook/main.mjs`,
-      `import { webpackFinal } from "../src/storybookConfig.mjs";`,
+      `import webpackFinal from "../src/webpackFinal.cjs";`,
       ``,
       `export default {`,
       `  webpackFinal,`,
@@ -26,7 +26,7 @@ export const ImplementationCustomSettings = {
   args: {
     code: [
       `// .storybook/main.mjs`,
-      `import { webpackFinal } from "../src/storybookConfig.mjs";`,
+      `import webpackFinal from "../src/webpackFinal.cjs";`,
       ``,
       `export default {`,
       `  webpackFinal: async (config) => {`,
@@ -43,7 +43,7 @@ export const ImplementationCustomSettings = {
 export const WebpackFinalConfig = {
   args: {
     code: [
-      `// @idesigncode/storybook-tools/storybookConfig.mjs`,
+      `// @idesigncode/storybook-tools/webpackFinal.cjs`,
       ...storybookConfigRaw.replace(/^\/?\*.*[^]*\*\/\n?/gm, ''),
     ].join('\n'),
   },
@@ -52,17 +52,6 @@ export const WebpackFinalConfig = {
 const configInitial = {
   module: {
     rules: [{}, { type: 'asset/source' }, { type: 'javascript/auto' }],
-  },
-  optimization: {
-    minimizer: [
-      {
-        options: {
-          minimizer: {
-            options: {},
-          },
-        },
-      },
-    ],
   },
 };
 
@@ -81,20 +70,6 @@ export const WebpackFinal = {
             { resourceQuery: { not: [/raw/] } },
             { type: 'asset/source' },
             { resourceQuery: { not: [/raw/] }, type: 'javascript/auto' },
-          ],
-        },
-        optimization: {
-          minimizer: [
-            {
-              options: {
-                minimizer: {
-                  options: {
-                    compress: false,
-                    format: { comments: true },
-                  },
-                },
-              },
-            },
           ],
         },
       });

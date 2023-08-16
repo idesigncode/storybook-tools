@@ -25,7 +25,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        '../package.json'
+        "../package.json"
       </span>
       <span class="token punctuation">
         ;
@@ -126,7 +126,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string-property property">
-        '^'
+        "^"
       </span>
       <span class="token operator">
         :
@@ -170,7 +170,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string-property property">
-        '../'
+        "../"
       </span>
       <span class="token operator">
         :
@@ -178,7 +178,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        ''
+        ""
       </span>
       <span class="token punctuation">
         ,
@@ -193,7 +193,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string-property property">
-        './'
+        "./"
       </span>
       <span class="token operator">
         :
@@ -201,7 +201,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        ''
+        ""
       </span>
       <span class="token punctuation">
         ,
@@ -216,7 +216,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string-property property">
-        'src/'
+        "src/"
       </span>
       <span class="token operator">
         :
@@ -224,7 +224,7 @@ exports[`Configuration/Import Path Replacements Env test 1`] = `
       <span class>
       </span>
       <span class="token string">
-        'dist/'
+        "dist/"
       </span>
       <span class="token punctuation">
         ,

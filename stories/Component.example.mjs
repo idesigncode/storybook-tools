@@ -19,7 +19,7 @@ const ComponentExample = () => {
             true,
             Input,
             function () {},
-            <Input key={Input} />,
+            <Input key="Input" />,
             null,
             1,
             { string: 'string' },

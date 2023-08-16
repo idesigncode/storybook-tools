@@ -1,75 +1,96 @@
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
 import formatNodeToJsxString from './formatNodeToJsxString.mjs';
 import getValueType from './getValueType.mjs';
 
+const parser = new DOMParser();
+const serializer = new XMLSerializer();
+
+const addRemoveOuterQuotes = (value) => {
+  return `<REMOVE_OUTER_QUOTES>${value}</REMOVE_OUTER_QUOTES>`;
+};
+
 /**
  * Format any value into a string
- * @param {*} value
- * @param {string} valueType
- * @returns {*|string}
+ * @param {*} code
+ * @param {string} type
+ * @returns {string}
  */
-const formatValueToString = (value, valueType) => {
-  if (valueType === 'string') {
-    return `"${value}"`;
-  }
+const formatValueToString = (code, type) => {
+  // ? Reference: https://stackoverflow.com/a/72891436
+  const valueString = JSON.stringify(
+    code,
+    (key, value) => {
+      const valueTypeActual = getValueType(value);
+      const valueType = code === value ? type : valueTypeActual;
 
-  if (valueType === 'elementType') {
-    return value.displayName;
-  }
-
-  if (valueType === 'node') {
-    if (value instanceof HTMLElement && value.outerHTML) {
-      return value.outerHTML.replace(/(<\w*)[^]*/gm, '$1 />');
-    }
-    return value instanceof Array
-      ? value.map(formatNodeToJsxString).join('\n')
-      : formatNodeToJsxString(value);
-  }
-
-  if (valueType === 'function') {
-    const functionName = value.name ? '' : 'function temporary';
-    return prettier
-      .format(`${functionName}${value}`, {
-        parser: 'babel',
-        plugins: [prettierBabel],
-      })
-      .replace(functionName ? /^function temporary/ : '', '');
-  }
-
-  if (valueType === 'array' || valueType.includes('object')) {
-    // ? Reference: https://stackoverflow.com/a/43652073
-    const stringifyJSON = (data) => {
-      const dataType = getValueType(data);
-      if (dataType === 'array') {
-        return `[${data.map(stringifyJSON)}]`;
+      if (valueType === 'string') {
+        return `${value}`;
       }
-      if (dataType.includes('object')) {
-        return `{${Object.keys(data).reduce((array, key) => {
-          return [...array, `${key}: ${stringifyJSON(data[key])}`];
-        }, [])}}`;
+
+      if (valueType === 'boolean' || valueType === 'function') {
+        return addRemoveOuterQuotes(value);
       }
-      return formatValueToString(data, dataType);
-    };
 
-    // Allow for valueType overrides
-    let valueData = valueType === 'array' ? `[${value}]` : `{${value}}`;
-    if (valueType === getValueType(value)) {
-      valueData = stringifyJSON(value);
-    }
+      if (valueType === 'elementType') {
+        return addRemoveOuterQuotes(value.displayName);
+      }
 
-    return (
-      prettier
-        .format(`const temporary = ${valueData}`, {
-          parser: 'babel',
-          plugins: [prettierBabel],
-        })
-        // Remove temporary const declaration
-        .replace(/^const temporary = ([^]*);$/gm, '$1')
-    );
-  }
+      if (valueType === 'node') {
+        // HTML elements
+        if (value instanceof HTMLElement && value.outerHTML) {
+          // * Prettier can't always format the HTMLElements returned by JSX (e.g. <input value"">)
+          // * To correct this the value.outerHTML must be parsed & serialized into valid XHTML
+          // ? Reference: https://stackoverflow.com/a/12092919
+          const valueAsParsedDocument = parser.parseFromString(
+            `${value.outerHTML}`,
+            'text/html',
+          );
+          const valueAsSerializedDocument = serializer.serializeToString(
+            valueAsParsedDocument,
+          );
+          const [, valueAsValidXhtml] =
+            valueAsSerializedDocument.split(/<\/?body>/gm);
 
-  return `${value}`;
+          return addRemoveOuterQuotes(valueAsValidXhtml);
+        }
+
+        // JSX elements
+        return addRemoveOuterQuotes(
+          `${
+            value instanceof Array
+              ? `<>${value.map(formatNodeToJsxString).join('')}</>`
+              : formatNodeToJsxString(value)
+          }`,
+        );
+      }
+
+      // Add missing syntax for type override values
+      if (valueType !== valueTypeActual) {
+        if (type === 'object' && !`${value}`.startsWith('{')) {
+          return addRemoveOuterQuotes(`{${value}}`);
+        }
+
+        if (type === 'array' && !`${value}`.startsWith('[')) {
+          return addRemoveOuterQuotes(`[${value}]`);
+        }
+
+        return addRemoveOuterQuotes(`${value}`);
+      }
+
+      return value
+        ? value
+        : // Stringify falsey values
+          addRemoveOuterQuotes(`${value}`);
+    },
+    2,
+  );
+
+  return valueString
+    ? valueString
+        // Remove quotes from around values
+        .replace(/["']?<\/?REMOVE_OUTER_QUOTES>["']?/gm, '')
+        // Reformat stringified new lines
+        .replaceAll(/\\n/gm, '\n')
+    : '';
 };
 
 export default formatValueToString;
