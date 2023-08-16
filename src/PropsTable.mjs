@@ -32,7 +32,9 @@ const PropsTable = ({ children, hideChildren = false, props = {} }) => {
   const dynamicProps = { ...initialProps, ref };
 
   const docgenProps =
-    children.type && children.type.__docgenInfo
+    children.type &&
+    children.type.__docgenInfo &&
+    children.type.__docgenInfo.props
       ? children.type.__docgenInfo.props
       : {};
 

@@ -156,6 +156,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   string
                 </span>
@@ -166,6 +168,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token string">
                   "string"
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -184,6 +191,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -194,6 +203,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -566,10 +580,17 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 <span class="token tag">
                   div
                 </span>
-                <span class="token tag">
+                <span class="token tag punctuation">
+                  &gt;
                 </span>
                 <span class="token tag punctuation">
-                  /&gt;
+                  &lt;/
+                </span>
+                <span class="token tag">
+                  div
+                </span>
+                <span class="token tag punctuation">
+                  &gt;
                 </span>
                 <span class="token punctuation">
                   ,
@@ -648,6 +669,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -658,6 +681,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -738,6 +766,8 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   current
                 </span>
@@ -748,6 +778,11 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
                 </span>
                 <span class="token keyword">
                   undefined
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -818,6 +853,80 @@ exports[`Components/PropsTable All Prop Types test 1`] = `
   </table>
 </div>
 <input style="display: none;">
+`;
+
+exports[`Components/PropsTable Array Of Children test 1`] = `
+<div class="propsTable sb-unstyled">
+  <table aria-hidden="false">
+    <thead>
+      <tr>
+        <th>
+          Prop
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          children
+          <span class="requiredProp">
+            *
+          </span>
+        </td>
+        <td>
+          <code>
+            node
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
+                <span class="token tag class-name">
+                  Component
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag punctuation">
+                  /&gt;
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
+                <span class="token tag">
+                  div
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag punctuation">
+                  /&gt;
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 `;
 
 exports[`Components/PropsTable Automatic Props Source test 1`] = `
@@ -1540,6 +1649,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         required
       </span>
@@ -1553,6 +1664,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1572,6 +1685,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         value
       </span>
@@ -1582,6 +1697,11 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript string">
         "value"
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1608,6 +1728,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         required
       </span>
@@ -1621,6 +1743,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript punctuation">
         ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -1640,6 +1764,8 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript">
       </span>
+      <span class="token tag script language-javascript">
+      </span>
       <span class="token tag script language-javascript literal-property property">
         value
       </span>
@@ -1650,6 +1776,11 @@ exports[`Components/PropsTable Manual Type With Required Source test 1`] = `
       </span>
       <span class="token tag script language-javascript string">
         "value"
+      </span>
+      <span class="token tag script language-javascript punctuation">
+        ,
+      </span>
+      <span class="token tag script language-javascript">
       </span>
       <span class="token tag script language-javascript">
       </span>
@@ -2010,6 +2141,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   required
                 </span>
@@ -2023,6 +2156,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class="token punctuation">
                   ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -2042,6 +2177,8 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class>
                 </span>
+                <span class>
+                </span>
                 <span class="token literal-property property">
                   value
                 </span>
@@ -2052,6 +2189,11 @@ exports[`Components/PropsTable Props test 1`] = `
                 </span>
                 <span class="token string">
                   "any"
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
                 </span>
                 <span class>
                 </span>
@@ -2431,5 +2573,214 @@ exports[`Components/PropsTable Raw Import test 1`] = `
   <button>
     Copy
   </button>
+</div>
+`;
+
+exports[`Components/PropsTable Ref Value Updates test 1`] = `
+<div class="example sb-unstyled">
+  <input value="t">
+</div>
+<div class="propsTable sb-unstyled">
+  <table aria-hidden="false">
+    <thead>
+      <tr>
+        <th>
+          Prop
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Value
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          onChange
+        </td>
+        <td>
+          <code>
+            function
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token keyword">
+                  function
+                </span>
+                <span class>
+                </span>
+                <span class="token function">
+                  onChange
+                </span>
+                <span class="token punctuation">
+                  (
+                </span>
+                <span class="token parameter">
+                  event
+                </span>
+                <span class="token punctuation">
+                  )
+                </span>
+                <span class>
+                </span>
+                <span class="token punctuation">
+                  {
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token keyword">
+                  return
+                </span>
+                <span class>
+                </span>
+                <span class="token function">
+                  setValue
+                </span>
+                <span class="token punctuation">
+                  (
+                </span>
+                <span class>
+                  event
+                </span>
+                <span class="token punctuation">
+                  .
+                </span>
+                <span class>
+                  target
+                </span>
+                <span class="token punctuation">
+                  .
+                </span>
+                <span class>
+                  value
+                </span>
+                <span class="token punctuation">
+                  )
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token punctuation">
+                  }
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          ref
+        </td>
+        <td>
+          <code>
+            ref object
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token punctuation">
+                  {
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token literal-property property">
+                  current
+                </span>
+                <span class="token operator">
+                  :
+                </span>
+                <span class>
+                </span>
+                <span class="token tag punctuation">
+                  &lt;
+                </span>
+                <span class="token tag">
+                  input
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag attr-name">
+                  value
+                </span>
+                <span class="token tag attr-value punctuation attr-equals">
+                  =
+                </span>
+                <span class="token tag attr-value punctuation">
+                  "
+                </span>
+                <span class="token tag attr-value punctuation">
+                  "
+                </span>
+                <span class="token tag">
+                </span>
+                <span class="token tag punctuation">
+                  /&gt;
+                </span>
+                <span class="token punctuation">
+                  ,
+                </span>
+                <span class>
+                </span>
+                <span class>
+                </span>
+                <span class="token punctuation">
+                  }
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          value
+        </td>
+        <td>
+          <code>
+            string
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token string">
+                  "t"
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 `;

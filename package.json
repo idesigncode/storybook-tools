@@ -1,6 +1,6 @@
 {
   "name": "@idesigncode/storybook-tools",
-  "version": "2.2.0",
+  "version": "3.0.1",
   "description": "A collection of ESM tools to document component implementation examples in Storybook.",
   "keywords": [
     "react",
@@ -49,9 +49,9 @@
     "formatNodeToJsxString.mjs",
     "formatValueToString.mjs",
     "getValueType.mjs",
-    "storybookConfig.mjs",
     "styles.css",
-    "themes.css"
+    "themes.css",
+    "webpackFinal.cjs"
   ],
   "exports": {
     "./DefaultValue.css": "./DefaultValue.css",
@@ -66,9 +66,9 @@
     "./getValueType.mjs": "./getValueType.mjs",
     "./package.json": "./package.json",
     "./storybook.css": "./storybook.css",
-    "./storybookConfig.mjs": "./storybookConfig.mjs",
     "./styles.css": "./styles.css",
-    "./themes.css": "./themes.css"
+    "./themes.css": "./themes.css",
+    "./webpackFinal.cjs": "./webpackFinal.cjs"
   },
   "dependencies": {
     "@storybook/addon-docs": "^7.1.1",

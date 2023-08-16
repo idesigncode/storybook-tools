@@ -142,3 +142,56 @@ export const ManualTypeWithRequiredSource = {
 export const AllPropTypes = {
   render: ComponentExample,
 };
+
+export const ArrayOfChildren = {
+  args: {
+    children: (
+      <PropsTable>
+        <Component />
+        <div />
+      </PropsTable>
+    ),
+    hideChildren: true,
+  },
+};
+
+export const RefValueUpdates = {
+  render: () => {
+    const [value, setValue] = React.useState('');
+    const ref = React.useRef();
+
+    return (
+      <PropsTable>
+        <input
+          onChange={(event) => {
+            return setValue(event.target.value);
+          }}
+          ref={ref}
+          value={value}
+        />
+      </PropsTable>
+    );
+  },
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement);
+    const input = canvas.getByDisplayValue('');
+    const [td] = await waitFor(() =>
+      canvas.getAllByText(
+        (_, element) =>
+          element.textContent === '{\n  current: undefined,\n}Copy',
+      ),
+    );
+
+    await step(`Update example component value`, async () => {
+      expect(input).not.toHaveValue();
+      await userEvent.type(input, 't');
+      expect(input).toHaveValue('t');
+    });
+
+    await step(`Ref value in the PropsTable is updated correctly`, async () => {
+      await waitFor(() =>
+        expect(td).toHaveTextContent(`{ current: <input value="" />, }Copy`),
+      );
+    });
+  },
+};

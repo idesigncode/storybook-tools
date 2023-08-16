@@ -242,6 +242,47 @@ exports[`Components/DefaultValue Manual Type With Link test 1`] = `
 </div>
 `;
 
+exports[`Components/DefaultValue Manual Type test 1`] = `
+<div class="defaultValue sb-unstyled">
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Default value:
+        </th>
+        <td>
+          <code>
+            array
+          </code>
+        </td>
+        <td>
+          <div class="Source sb-unstyled ">
+            <pre class="prismjs">
+              <code class="language-jsx"
+                    style="white-space: pre;"
+              >
+                <span class="token punctuation">
+                  [
+                </span>
+                <span class>
+                  value
+                </span>
+                <span class="token punctuation">
+                  ]
+                </span>
+              </code>
+            </pre>
+            <button>
+              Copy
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;
+
 exports[`Components/DefaultValue Props test 1`] = `
 <div class="propsTable sb-unstyled">
   <table aria-hidden="false">
